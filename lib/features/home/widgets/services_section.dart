@@ -1,0 +1,226 @@
+import 'package:carousel_slider_plus/carousel_slider_plus.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:uniqswims_lp/l10n/app_localizations.dart';
+
+class ServicesSection extends StatelessWidget {
+  final Key? sectionKey;
+
+  const ServicesSection({Key? key, this.sectionKey}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final cs = theme.colorScheme;
+    final tt = theme.textTheme;
+    final l10n = AppLocalizations.of(context)!;
+
+    final services = [
+      _ServiceItem(
+        title: l10n.serviceMaintenance,
+        description: l10n.serviceMaintenanceDesc,
+        imagePath: 'images/image-8-hd.png',
+        alignment: Alignment.bottomCenter,
+        route: '/maintenance',
+      ),
+      _ServiceItem(
+        title: l10n.serviceRepairs,
+        description: l10n.serviceRepairsDesc,
+        imagePath: 'images/image-5-hd.png',
+        alignment: Alignment.center,
+        route: '/repairs',
+      ),
+      _ServiceItem(
+        title: l10n.serviceInvestment,
+        description: l10n.serviceInvestmentDesc,
+        imagePath:
+            'images/image-7-hd.png', // ← Imagem 7 aplicada no card de Investimento
+        alignment: Alignment.center,
+        route: '/investments',
+      ),
+    ];
+
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final maxWidth = constraints.maxWidth;
+        final itemsToShow = _itemsForWidth(maxWidth);
+        final viewportFraction = 1 / itemsToShow;
+        final isMobile = maxWidth < 600;
+
+        return Container(
+          key: sectionKey,
+          width: double.infinity,
+          color: cs.background,
+          padding: EdgeInsets.symmetric(
+            vertical: isMobile ? 36 : 72,
+            horizontal: isMobile ? 20 : 48,
+          ),
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 1200),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 64,
+                  height: 4,
+                  color: cs.onSurface,
+                  margin: const EdgeInsets.only(bottom: 12),
+                ),
+                Text(
+                  l10n.servicesTitle,
+                  style:
+                      (tt.headlineMedium ??
+                              const TextStyle(
+                                fontSize: 34,
+                                fontWeight: FontWeight.bold,
+                              ))
+                          .copyWith(color: cs.onSurface),
+                ),
+                const SizedBox(height: 20),
+                CarouselSlider.builder(
+                  itemCount: services.length,
+                  itemBuilder: (context, index, realIndex) {
+                    final service = services[index];
+                    return _ServiceCard(
+                      title: service.title,
+                      description: service.description,
+                      imagePath: service.imagePath,
+                      alignment: service.alignment,
+                      route: service.route,
+                      colorScheme: cs,
+                      textTheme: tt,
+                    );
+                  },
+                  options: CarouselOptions(
+                    viewportFraction: viewportFraction,
+                    enableInfiniteScroll: false,
+                    enlargeCenterPage: false,
+                    height: itemsToShow == 1 ? 340 : 380,
+                    padEnds: false,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  int _itemsForWidth(double width) {
+    if (width < 600) return 1;
+    if (width < 1000) return 2;
+    return 3;
+  }
+}
+
+class _ServiceCard extends StatelessWidget {
+  final String title;
+  final String description;
+  final String imagePath;
+  final Alignment alignment;
+  final String route;
+  final ColorScheme colorScheme;
+  final TextTheme textTheme;
+
+  const _ServiceCard({
+    required this.title,
+    required this.description,
+    required this.imagePath,
+    required this.alignment,
+    required this.route,
+    required this.colorScheme,
+    required this.textTheme,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 6.0),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(14),
+        onTap: () => context.go(route),
+        child: Container(
+          decoration: BoxDecoration(
+            color: colorScheme.surface,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: colorScheme.onSurface.withOpacity(0.04)),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.35),
+                blurRadius: 14,
+                offset: const Offset(0, 6),
+              ),
+            ],
+          ),
+          padding: const EdgeInsets.all(14),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 180,
+                width: double.infinity,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: _buildImage(imagePath, alignment),
+                ),
+              ),
+              const SizedBox(height: 14),
+              Text(
+                title,
+                style:
+                    (textTheme.titleLarge ??
+                            const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800,
+                            ))
+                        .copyWith(color: colorScheme.onSurface),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                description,
+                style: (textTheme.bodyMedium ?? const TextStyle(fontSize: 14))
+                    .copyWith(
+                      color: colorScheme.onSurface.withOpacity(0.85),
+                      height: 1.5,
+                    ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildImage(String cardImgPath, Alignment imgAlignment) {
+    return Image.asset(
+      cardImgPath,
+      fit: BoxFit.cover,
+      alignment: imgAlignment,
+      errorBuilder: (context, error, stackTrace) {
+        return Container(
+          color: colorScheme.surface,
+          child: const Center(
+            child: Icon(Icons.broken_image, color: Colors.white24, size: 48),
+          ),
+        );
+      },
+    );
+  }
+}
+
+class _ServiceItem {
+  final String title;
+  final String description;
+  final String imagePath;
+  final Alignment alignment;
+  final String route;
+
+  const _ServiceItem({
+    required this.title,
+    required this.description,
+    required this.imagePath,
+    this.alignment = Alignment.center,
+    required this.route,
+  });
+}
