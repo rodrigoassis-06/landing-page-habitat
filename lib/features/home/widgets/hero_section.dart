@@ -1,254 +1,246 @@
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:uniqswims_lp/habitat_theme.dart';
 import 'package:uniqswims_lp/l10n/app_localizations.dart';
 import 'package:uniqswims_lp/shared/animations/reveal_on_scroll.dart';
 
-class HeroSection extends StatefulWidget {
+class HeroSection extends StatelessWidget {
   final VoidCallback onContactPressed;
+  final VoidCallback onPortfolioPressed;
   final Key? sectionKey;
 
   const HeroSection({
     super.key,
     required this.onContactPressed,
+    required this.onPortfolioPressed,
     this.sectionKey,
   });
 
   @override
-  State<HeroSection> createState() => _HeroSectionState();
-}
-
-class _HeroSectionState extends State<HeroSection> {
-  VideoPlayerController? _controller;
-  bool _videoReady = false;
-
-  @override
-  void initState() {
-    super.initState();
-    _initVideo();
-  }
-
-  Future<void> _initVideo() async {
-    final controller = VideoPlayerController.asset(
-      'assets/videos/pool_web.mp4',
-    );
-
-    try {
-      await controller.initialize();
-
-      // Previne vazamento de memória se o widget for desmontado durante a inicialização
-      if (!mounted) {
-        await controller.dispose();
-        return;
-      }
-
-      _controller = controller;
-      await _controller!.setVolume(0.0);
-      await _controller!.setLooping(true);
-      await _controller!.play();
-
-      if (mounted) {
-        setState(() {
-          _videoReady = true;
-        });
-      }
-    } catch (e, st) {
-      debugPrint('Video init failed: $e\n$st');
-      await controller.dispose();
-
-      if (mounted) {
-        setState(() {
-          _videoReady = false;
-        });
-      }
-    }
-  }
-
-  @override
-  void dispose() {
-    _controller?.dispose();
-    _controller = null;
-    super.dispose();
-  }
-
-  Widget _buildVideoOrFallback() {
-    if (_videoReady &&
-        _controller != null &&
-        _controller!.value.isInitialized) {
-      return SizedBox.expand(
-        child: FittedBox(
-          fit: BoxFit.cover,
-          clipBehavior: Clip.hardEdge,
-          child: SizedBox(
-            width: _controller!.value.size.width,
-            height: _controller!.value.size.height,
-            child: VideoPlayer(_controller!),
-          ),
-        ),
-      );
-    }
-
-    return Image.asset(
-      'assets/images/pool_placeholder.jpg',
-      fit: BoxFit.cover,
-    );
-  }
-
-  @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final textTheme = theme.textTheme;
     final l10n = AppLocalizations.of(context)!;
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        final isMobile = constraints.maxWidth < 768;
+        final isMobile = constraints.maxWidth < 800;
+        final screenHeight = MediaQuery.sizeOf(context).height;
 
-        final double sectionHeight = isMobile
-            ? 640.0
-            : (MediaQuery.sizeOf(context).height * 0.85).clamp(560.0, 900.0);
-
-        return SizedBox(
-          key: widget.sectionKey,
+        return Container(
+          key: sectionKey,
           width: double.infinity,
-          height: sectionHeight,
-          child: Stack(
-            fit: StackFit.expand,
+          constraints: BoxConstraints(
+            minHeight: isMobile ? 650 : (screenHeight - 80).clamp(650.0, 950.0),
+          ),
+          decoration: const BoxDecoration(
+            color: HabitatTheme.background,
+            border: Border(
+              bottom: BorderSide(color: HabitatTheme.border, width: 1),
+            ),
+          ),
+          padding: EdgeInsets.symmetric(
+            horizontal: isMobile ? 24 : 64,
+            vertical: isMobile ? 48 : 80,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // 1. Background Video ou Imagem de Fallback
-              Positioned.fill(
-                child: _buildVideoOrFallback(),
-              ),
-
-              // 2. Overlay com Gradiente
-              Positioned.fill(
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: isMobile
-                          ? Alignment.topCenter
-                          : Alignment.centerLeft,
-                      end: isMobile
-                          ? Alignment.bottomCenter
-                          : Alignment.centerRight,
-                      colors: [
-                        Colors.black.withValues(alpha: 0.20),
-                        Colors.black.withValues(alpha: 0.75),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-
-              // 3. Conteúdo Central (Textos e Botão)
-              Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: isMobile ? 40 : 80,
-                  horizontal: isMobile ? 24 : 48,
-                ),
-                child: Center(
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxWidth: 1200),
+              // Top tag & year
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  RevealOnScroll(
                     child: Row(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
-                        if (!isMobile)
-                          const Expanded(flex: 5, child: SizedBox()),
-
-                        Expanded(
-                          flex: isMobile ? 1 : 6,
-                          child: Align(
-                            alignment: isMobile
-                                ? Alignment.center
-                                : Alignment.centerRight,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              crossAxisAlignment: isMobile
-                                  ? CrossAxisAlignment.center
-                                  : CrossAxisAlignment.end,
-                              children: [
-                                RevealOnScroll(
-                                  child: Text(
-                                    l10n.heroTitle,
-                                    textAlign: isMobile
-                                        ? TextAlign.center
-                                        : TextAlign.right,
-                                    style: (textTheme.displayLarge ??
-                                            const TextStyle(
-                                              fontSize: 48,
-                                              fontWeight: FontWeight.w900,
-                                            ))
-                                        .copyWith(
-                                      color: Colors.white,
-                                      height: 1.05,
-                                      letterSpacing: -1,
-                                    ),
-                                  ),
-                                ),
-
-                                const SizedBox(height: 20),
-
-                                RevealOnScroll(
-                                  delay: const Duration(milliseconds: 200),
-                                  child: ConstrainedBox(
-                                    constraints: BoxConstraints(
-                                      maxWidth: isMobile ? 560 : 520,
-                                    ),
-                                    child: Text(
-                                      l10n.heroSubtitle,
-                                      textAlign: isMobile
-                                          ? TextAlign.center
-                                          : TextAlign.right,
-                                      style: (textTheme.bodyLarge ??
-                                              const TextStyle(fontSize: 18))
-                                          .copyWith(
-                                        color: Colors.white,
-                                        height: 1.6,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-
-                                const SizedBox(height: 28),
-
-                                RevealOnScroll(
-                                  delay: const Duration(milliseconds: 400),
-                                  child: OutlinedButton(
-                                    onPressed: widget.onContactPressed,
-                                    style: OutlinedButton.styleFrom(
-                                      foregroundColor: Colors.white,
-                                      side: const BorderSide(
-                                        color: Colors.white,
-                                        width: 1.5,
-                                      ),
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 28,
-                                        vertical: 16,
-                                      ),
-                                      shape: const RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.zero,
-                                      ),
-                                    ),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        Text(l10n.heroCta),
-                                        const SizedBox(width: 10),
-                                        const Icon(
-                                          Icons.arrow_forward,
-                                          size: 18,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                        Container(
+                          width: 8,
+                          height: 8,
+                          decoration: const BoxDecoration(
+                            color: HabitatTheme.accent,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Text(
+                          l10n.heroEyebrow,
+                          style: GoogleFonts.syne(
+                            fontSize: 11,
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: 2.5,
+                            color: HabitatTheme.textMuted,
                           ),
                         ),
                       ],
                     ),
                   ),
-                ),
+                  if (!isMobile)
+                    RevealOnScroll(
+                      child: Text(
+                        '© 2026',
+                        style: GoogleFonts.inter(
+                          fontSize: 12,
+                          letterSpacing: 2.0,
+                          color: HabitatTheme.textMuted,
+                        ),
+                      ),
+                    ),
+                ],
               ),
+
+              const SizedBox(height: 60),
+
+              // Title Grande Editorial
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  RevealOnScroll(
+                    child: Text(
+                      l10n.heroTitleLine1,
+                      style: GoogleFonts.syne(
+                        fontSize: isMobile ? 42 : 84,
+                        fontWeight: FontWeight.w800,
+                        color: HabitatTheme.cream,
+                        letterSpacing: isMobile ? -1.0 : -3.0,
+                        height: 0.95,
+                      ),
+                    ),
+                  ),
+                  RevealOnScroll(
+                    delay: const Duration(milliseconds: 150),
+                    child: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: 'HABITAT ',
+                            style: GoogleFonts.syne(
+                              fontSize: isMobile ? 42 : 84,
+                              fontWeight: FontWeight.w800,
+                              color: HabitatTheme.cream,
+                              letterSpacing: isMobile ? -1.0 : -3.0,
+                              height: 0.95,
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'PERFEITO',
+                            style: GoogleFonts.syne(
+                              fontSize: isMobile ? 42 : 84,
+                              fontWeight: FontWeight.w800,
+                              color: HabitatTheme.accent,
+                              letterSpacing: isMobile ? -1.0 : -3.0,
+                              height: 0.95,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  RevealOnScroll(
+                    delay: const Duration(milliseconds: 300),
+                    child: Text(
+                      l10n.heroTitleLine3,
+                      style: GoogleFonts.syne(
+                        fontSize: isMobile ? 42 : 84,
+                        fontWeight: FontWeight.w800,
+                        color: HabitatTheme.cream,
+                        letterSpacing: isMobile ? -1.0 : -3.0,
+                        height: 0.95,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 60),
+
+              // Rodapé do Hero: Descrição + Botões
+              isMobile
+                  ? Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        RevealOnScroll(
+                          delay: const Duration(milliseconds: 400),
+                          child: Text(
+                            l10n.heroSubtitle,
+                            style: GoogleFonts.inter(
+                              fontSize: 15,
+                              color: HabitatTheme.textSecondary,
+                              height: 1.7,
+                              fontWeight: FontWeight.w300,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 32),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: ElevatedButton(
+                                onPressed: onContactPressed,
+                                child: Text(l10n.heroCtaPrimary),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 12),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: OutlinedButton(
+                                onPressed: onPortfolioPressed,
+                                child: Text(l10n.heroCtaSecondary),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    )
+                  : Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Expanded(
+                          flex: 6,
+                          child: RevealOnScroll(
+                            delay: const Duration(milliseconds: 400),
+                            child: ConstrainedBox(
+                              constraints: const BoxConstraints(maxWidth: 580),
+                              child: Text(
+                                l10n.heroSubtitle,
+                                style: GoogleFonts.inter(
+                                  fontSize: 17,
+                                  color: HabitatTheme.textSecondary,
+                                  height: 1.75,
+                                  fontWeight: FontWeight.w300,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const Spacer(),
+                        RevealOnScroll(
+                          delay: const Duration(milliseconds: 500),
+                          child: Row(
+                            children: [
+                              OutlinedButton(
+                                onPressed: onPortfolioPressed,
+                                child: Text(l10n.heroCtaSecondary),
+                              ),
+                              const SizedBox(width: 16),
+                              ElevatedButton(
+                                onPressed: onContactPressed,
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Text(l10n.heroCtaPrimary),
+                                    const SizedBox(width: 10),
+                                    const Icon(Icons.arrow_forward, size: 14),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
             ],
           ),
         );
