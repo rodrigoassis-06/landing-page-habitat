@@ -56,7 +56,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get aboutCta => 'Conhecer o nosso método';
 
   @override
-  String get servicesTitle => 'Nossos Serviços';
+  String get servicesTitle => 'O que podemos fazer por você';
 
   @override
   String get serviceMaintenance => 'Construção de Identidade';

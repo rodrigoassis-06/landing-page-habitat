@@ -55,7 +55,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get aboutCta => 'Conhecer o nosso método';
 
   @override
-  String get servicesTitle => 'Our Services';
+  String get servicesTitle => 'O que podemos fazer por você';
 
   @override
   String get serviceMaintenance => 'Pool Maintenance';
