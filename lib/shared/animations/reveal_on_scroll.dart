@@ -71,21 +71,25 @@ class _RevealOnScrollState extends State<RevealOnScroll>
 
   @override
   Widget build(BuildContext context) {
+    if (_visible) {
+      return RepaintBoundary(
+        child: FadeTransition(
+          opacity: _fadeAnimation,
+          child: SlideTransition(
+            position: _slideAnimation,
+            child: widget.child,
+          ),
+        ),
+      );
+    }
+
     return VisibilityDetector(
       key: _detectorKey,
       onVisibilityChanged: _onVisibilityChanged,
-      child: _visible
-          ? FadeTransition(
-              opacity: _fadeAnimation,
-              child: SlideTransition(
-                position: _slideAnimation,
-                child: widget.child,
-              ),
-            )
-          : Opacity(
-              opacity: 0,
-              child: widget.child,
-            ),
+      child: Opacity(
+        opacity: 0,
+        child: widget.child,
+      ),
     );
   }
 }

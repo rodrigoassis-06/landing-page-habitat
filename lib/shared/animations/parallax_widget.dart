@@ -18,7 +18,13 @@ class _ParallaxWidgetState extends State<ParallaxWidget> {
   final GlobalKey _key = GlobalKey();
 
   ScrollPosition? _scrollPosition;
-  double _offset = 0;
+  late final ValueNotifier<double> _offsetNotifier;
+
+  @override
+  void initState() {
+    super.initState();
+    _offsetNotifier = ValueNotifier<double>(0.0);
+  }
 
   @override
   void didChangeDependencies() {
@@ -26,25 +32,20 @@ class _ParallaxWidgetState extends State<ParallaxWidget> {
 
     final newScrollPosition = Scrollable.maybeOf(context)?.position;
 
-    // Evita adicionar o mesmo listener mais de uma vez quando as
-    // dependências do widget forem atualizadas.
     if (identical(_scrollPosition, newScrollPosition)) {
       return;
     }
 
-    // Se o widget mudou de Scrollable, remove o listener anterior.
     _scrollPosition?.removeListener(_onScroll);
-
     _scrollPosition = newScrollPosition;
     _scrollPosition?.addListener(_onScroll);
   }
 
   @override
   void dispose() {
-    // Não usa context aqui.
     _scrollPosition?.removeListener(_onScroll);
     _scrollPosition = null;
-
+    _offsetNotifier.dispose();
     super.dispose();
   }
 
@@ -60,18 +61,23 @@ class _ParallaxWidgetState extends State<ParallaxWidget> {
     final screenHeight = MediaQuery.of(context).size.height;
 
     final percent = (position / screenHeight).clamp(0.0, 1.0);
-
-    setState(() {
-      _offset = (percent - 0.5) * widget.movement;
-    });
+    _offsetNotifier.value = (percent - 0.5) * widget.movement;
   }
 
   @override
   Widget build(BuildContext context) {
-    return Transform.translate(
+    return RepaintBoundary(
       key: _key,
-      offset: Offset(0, _offset),
-      child: widget.child,
+      child: ValueListenableBuilder<double>(
+        valueListenable: _offsetNotifier,
+        child: widget.child,
+        builder: (_, offset, child) {
+          return Transform.translate(
+            offset: Offset(0, offset),
+            child: child,
+          );
+        },
+      ),
     );
   }
 }
