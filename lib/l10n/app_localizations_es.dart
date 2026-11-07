@@ -80,7 +80,7 @@ class AppLocalizationsEs extends AppLocalizations {
       'Descubra opciones de rutas y oportunidades de franquicias diseñadas para inversores que buscan fuertes rendimientos y gran escalabilidad.';
 
   @override
-  String get whyChooseTitle => '¿Por Qué Elegir\na HABITAT?';
+  String get whyChooseTitle => 'O que entregamos pra você';
 
   @override
   String get whyChooseSpecialized => 'Mantenimiento Especializado';

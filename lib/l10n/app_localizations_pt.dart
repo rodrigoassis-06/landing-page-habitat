@@ -80,8 +80,7 @@ class AppLocalizationsPt extends AppLocalizations {
       'Desenvolvemos plataformas web, portais de clientes e ERPs/CRMs de ponta a ponta, projetados exatamente para as regras do seu cliente, com suporte e sustentação contínua.';
 
   @override
-  String get whyChooseTitle => 'Por Que Construir Seu Projeto
-com a Habitat?';
+  String get whyChooseTitle => 'O que entregamos pra você';
 
   @override
   String get whyChooseSpecialized => 'Estratégia e Identidade Integradas';

@@ -79,8 +79,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Discover route options and franchise opportunities designed for investors seeking strong returns and great scalability.';
 
   @override
-  String get whyChooseTitle => 'Why Build Your Project
-With Habitat?';
+  String get whyChooseTitle => 'O que entregamos pra você';
 
   @override
   String get whyChooseSpecialized => 'Integrated Strategy & Identity';
