@@ -142,7 +142,7 @@ class AboutSection extends StatelessWidget {
                 )
               : Center(
                   child: Icon(
-                    Icons.pool,
+                    Icons.hub_outlined,
                     size: 56,
                     color: colorScheme.onSurface.withOpacity(0.9),
                   ),

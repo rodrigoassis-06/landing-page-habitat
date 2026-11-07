@@ -74,9 +74,9 @@ class _ContactSectionState extends State<ContactSection> {
                           children: [
                             Text(l10n.contactOrCall, style: tt.labelLarge?.copyWith(color: cs.onSurface.withOpacity(0.9))),
                             const SizedBox(height: 6),
-                            Text('+1 (407) 555-0123', style: tt.bodyMedium?.copyWith(color: cs.onSurface)),
+                            Text('(11) 98892-1999', style: tt.bodyMedium?.copyWith(color: cs.onSurface)),
                             const SizedBox(height: 8),
-                            Text('support@uniqswims.com', style: tt.bodySmall?.copyWith(color: cs.onSurface.withOpacity(0.9))),
+                            Text('contato@habitatmedia.com.br', style: tt.bodySmall?.copyWith(color: cs.onSurface.withOpacity(0.9))),
                           ],
                         ),
                       ),

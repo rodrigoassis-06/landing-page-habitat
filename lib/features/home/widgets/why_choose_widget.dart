@@ -16,17 +16,17 @@ class WhyChooseWidget extends StatelessWidget {
 
     final reasons = [
       {
-        "icon": Icons.build_rounded,
+        "icon": Icons.insights_rounded,
         "title": l10n.whyChooseSpecialized,
         "desc": l10n.whyChooseSpecializedDesc,
       },
       {
-        "icon": Icons.star_border,
+        "icon": Icons.auto_awesome_rounded,
         "title": l10n.whyChooseInnovation,
         "desc": l10n.whyChooseInnovationDesc,
       },
       {
-        "icon": Icons.card_membership,
+        "icon": Icons.code_rounded,
         "title": l10n.whyChooseLicensing,
         "desc": l10n.whyChooseLicensingDesc,
       },

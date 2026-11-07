@@ -22,8 +22,8 @@ class Footer extends StatelessWidget {
   }) : super(key: key);
 
   static const Map<String, String> _defaultSocialLinks = {
-    'facebook': 'https://facebook.com/yourpage',
-    'instagram': 'https://instagram.com/yourpage',
+    'linkedin': 'https://linkedin.com/company/habitatmedia',
+    'instagram': 'https://instagram.com/habitatmedia',
   };
 
   Future<void> _openUrl(String url) async {

@@ -33,11 +33,11 @@ class AppLocalizationsPt extends AppLocalizations {
   String get navContact => 'Contato';
 
   @override
-  String get heroTitle => 'UM NOVO CONCEITO\nEM CUIDADOS COM PISCINA';
+  String get heroTitle => 'UM NOVO CONCEITO\nDE CONSTRUÇÃO EM 360°';
 
   @override
   String get heroSubtitle =>
-      'Na HABITAT, vamos além da manutenção tradicional, oferecendo um compromisso incomparável com cuidado e precisão.';
+      'Vamos além da entrega tradicional. Ajudamos a sua marca a dominar o seu próprio território.';
 
   @override
   String get heroCta => 'Entre em contato';
@@ -425,7 +425,8 @@ class AppLocalizationsPt extends AppLocalizations {
   String get investmentsBadge => 'OPORTUNIDADES DE NEGÓCIO';
 
   @override
-  String get investmentsHeroTitle => 'Escalone seu Futuro.\nInvista na HABITAT.';
+  String get investmentsHeroTitle =>
+      'Escalone seu Futuro.\nInvista na HABITAT.';
 
   @override
   String get investmentsHeroDesc =>
@@ -508,11 +509,11 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   String get navContact => 'Contato';
 
   @override
-  String get heroTitle => 'UM NOVO CONCEITO\nEM CUIDADOS COM PISCINA';
+  String get heroTitle => 'UM NOVO CONCEITO\nDE CONSTRUÇÃO EM 360°';
 
   @override
   String get heroSubtitle =>
-      'Na HABITAT, vamos além da manutenção tradicional, oferecendo um compromisso incomparável com cuidado e precisão.';
+      'Vamos além da entrega tradicional. Ajudamos a sua marca a dominar o seu próprio território.';
 
   @override
   String get heroCta => 'Entre em contato';
@@ -900,7 +901,8 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   String get investmentsBadge => 'OPORTUNIDADES DE NEGÓCIO';
 
   @override
-  String get investmentsHeroTitle => 'Escalone seu Futuro.\nInvista na HABITAT.';
+  String get investmentsHeroTitle =>
+      'Escalone seu Futuro.\nInvista na HABITAT.';
 
   @override
   String get investmentsHeroDesc =>
