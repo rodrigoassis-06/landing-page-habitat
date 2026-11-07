@@ -104,7 +104,7 @@ abstract class AppLocalizations {
   /// No description provided for @appTitle.
   ///
   /// In en, this message translates to:
-  /// **'UniqSwims'**
+  /// **'HABITAT'**
   String get appTitle;
 
   /// No description provided for @navHome.
@@ -158,7 +158,7 @@ abstract class AppLocalizations {
   /// No description provided for @heroSubtitle.
   ///
   /// In en, this message translates to:
-  /// **'At UNIQ Swims, we transcend traditional maintenance by offering an unparalleled commitment to care and precision.'**
+  /// **'At HABITAT, we transcend traditional maintenance by offering an unparalleled commitment to care and precision.'**
   String get heroSubtitle;
 
   /// No description provided for @heroCta.
@@ -176,7 +176,7 @@ abstract class AppLocalizations {
   /// No description provided for @aboutDesc1.
   ///
   /// In en, this message translates to:
-  /// **'At UNIQ Swims, we believe your pool should be a haven of relaxation, not a source of concern. Our mission is to deliver exceptional pool and spa maintenance services, ensuring your aquatic spaces remain immaculate and inviting.'**
+  /// **'At HABITAT, we believe your pool should be a haven of relaxation, not a source of concern. Our mission is to deliver exceptional pool and spa maintenance services, ensuring your aquatic spaces remain immaculate and inviting.'**
   String get aboutDesc1;
 
   /// No description provided for @aboutDesc2.
@@ -236,7 +236,7 @@ abstract class AppLocalizations {
   /// No description provided for @whyChooseTitle.
   ///
   /// In en, this message translates to:
-  /// **'Why Choose\nUNIQ Swims?'**
+  /// **'Why Choose\nHABITAT?'**
   String get whyChooseTitle;
 
   /// No description provided for @whyChooseSpecialized.
@@ -284,7 +284,7 @@ abstract class AppLocalizations {
   /// No description provided for @whyCommitmentDesc.
   ///
   /// In en, this message translates to:
-  /// **'At UNIQ Swims, we are dedicated to delivering unparalleled excellence, trust, and innovation in every aspect of our services. Whether maintaining your pool or assisting you in embarking on a new career path, our mission is to provide exceptional solutions that meet your unique needs.'**
+  /// **'At HABITAT, we are dedicated to delivering unparalleled excellence, trust, and innovation in every aspect of our services. Whether maintaining your pool or assisting you in embarking on a new career path, our mission is to provide exceptional solutions that meet your unique needs.'**
   String get whyCommitmentDesc;
 
   /// No description provided for @professionalsTitle.
@@ -428,7 +428,7 @@ abstract class AppLocalizations {
   /// No description provided for @footerCopyright.
   ///
   /// In en, this message translates to:
-  /// **'© {year} UniqSwims. All rights reserved.'**
+  /// **'© {year} HABITAT. All rights reserved.'**
   String footerCopyright(Object year);
 
   /// No description provided for @footerMadeBy.
@@ -536,13 +536,13 @@ abstract class AppLocalizations {
   /// No description provided for @leadWhatsappMsg.
   ///
   /// In en, this message translates to:
-  /// **'Hello UNIQ Swims!\nMy name is {name}.\nI am interested in: {service}.\nMessage: {message}'**
+  /// **'Hello HABITAT!\nMy name is {name}.\nI am interested in: {service}.\nMessage: {message}'**
   String leadWhatsappMsg(Object name, Object service, Object message);
 
   /// No description provided for @maintenanceAppBar.
   ///
   /// In en, this message translates to:
-  /// **'UNIQ Maintenance'**
+  /// **'HABITAT Maintenance'**
   String get maintenanceAppBar;
 
   /// No description provided for @maintenanceBadge.
@@ -650,7 +650,7 @@ abstract class AppLocalizations {
   /// No description provided for @maintenanceWhyTitle.
   ///
   /// In en, this message translates to:
-  /// **'Why UNIQ Maintenance?'**
+  /// **'Why HABITAT Maintenance?'**
   String get maintenanceWhyTitle;
 
   /// No description provided for @maintenanceWhyDesc1.
@@ -692,7 +692,7 @@ abstract class AppLocalizations {
   /// No description provided for @repairsAppBar.
   ///
   /// In en, this message translates to:
-  /// **'UNIQ Repairs'**
+  /// **'HABITAT Repairs'**
   String get repairsAppBar;
 
   /// No description provided for @repairsBadge.
@@ -800,7 +800,7 @@ abstract class AppLocalizations {
   /// No description provided for @repairsWhyTitle.
   ///
   /// In en, this message translates to:
-  /// **'Why Trust UNIQ Repairs?'**
+  /// **'Why Trust HABITAT Repairs?'**
   String get repairsWhyTitle;
 
   /// No description provided for @repairsWhyDesc1.
@@ -842,7 +842,7 @@ abstract class AppLocalizations {
   /// No description provided for @investmentsAppBar.
   ///
   /// In en, this message translates to:
-  /// **'UNIQ Investments'**
+  /// **'HABITAT Investments'**
   String get investmentsAppBar;
 
   /// No description provided for @investmentsBadge.
@@ -854,7 +854,7 @@ abstract class AppLocalizations {
   /// No description provided for @investmentsHeroTitle.
   ///
   /// In en, this message translates to:
-  /// **'Scale Your Future.\nInvest in UNIQ.'**
+  /// **'Scale Your Future.\nInvest in HABITAT.'**
   String get investmentsHeroTitle;
 
   /// No description provided for @investmentsHeroDesc.

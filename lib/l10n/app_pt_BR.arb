@@ -2,7 +2,7 @@
   "@@locale": "pt_BR",
   "@@last_modified": "2026-07-13",
 
-  "appTitle": "UniqSwims",
+  "appTitle": "HABITAT",
   "navHome": "Início",
   "navAbout": "Sobre",
   "navWhyChoose": "Por que escolher",
@@ -12,11 +12,11 @@
   "navContact": "Contato",
 
   "heroTitle": "UM NOVO CONCEITO\nEM CUIDADOS COM PISCINA",
-  "heroSubtitle": "Na UNIQ Swims, vamos além da manutenção tradicional, oferecendo um compromisso incomparável com cuidado e precisão.",
+  "heroSubtitle": "Na HABITAT, vamos além da manutenção tradicional, oferecendo um compromisso incomparável com cuidado e precisão.",
   "heroCta": "Entre em contato",
 
   "aboutTitle": "Seu Parceiro de\nConfiança em\nCuidados com Piscina",
-  "aboutDesc1": "Na UNIQ Swims, acreditamos que sua piscina deve ser um refúgio de relaxamento, não uma fonte de preocupação. Nossa missão é oferecer serviços excepcionais de manutenção de piscinas e spas, garantindo que seus espaços aquáticos permaneçam impecáveis e convidativos.",
+  "aboutDesc1": "Na HABITAT, acreditamos que sua piscina deve ser um refúgio de relaxamento, não uma fonte de preocupação. Nossa missão é oferecer serviços excepcionais de manutenção de piscinas e spas, garantindo que seus espaços aquáticos permaneçam impecáveis e convidativos.",
   "aboutDesc2": "Da manutenção de rotina aos reparos especializados, nossa equipe oferece atendimento confiável e profissional, garantindo que sua piscina permaneça cristalina e sem preocupações para que você possa aproveitar a tranquilidade que ela proporciona.",
   "aboutCta": "Entre em contato",
 
@@ -28,7 +28,7 @@
   "serviceInvestment": "Investimento",
   "serviceInvestmentDesc": "Descubra opções de rotas e oportunidades de franquias projetadas para investidores buscando retornos fortes e grande escalabilidade.",
 
-  "whyChooseTitle": "Por que Escolher\na UNIQ Swims?",
+  "whyChooseTitle": "Por que Escolher\na HABITAT?",
   "whyChooseSpecialized": "Manutenção Especializada",
   "whyChooseSpecializedDesc": "Gerenciamos meticulosamente cada aspecto da sua piscina ou spa, garantindo atenção aos detalhes sem igual.",
   "whyChooseInnovation": "Inovação e Exclusividade",
@@ -36,7 +36,7 @@
   "whyChooseLicensing": "Licenciamento Profissional",
   "whyChooseLicensingDesc": "Nossos programas abrangentes de certificação e treinamento capacitam você a construir uma carreira de sucesso em um setor promissor.",
   "whyCommitmentTitle": "Nosso Compromisso\ncom a Excelência",
-  "whyCommitmentDesc": "Na UNIQ Swims, somos dedicados a oferecer excelência, confiança e inovação incomparáveis em todos os aspectos dos nossos serviços. Seja mantendo sua piscina ou ajudando você a embarcar em uma nova carreira, nossa missão é fornecer soluções excepcionais que atendam às suas necessidades.",
+  "whyCommitmentDesc": "Na HABITAT, somos dedicados a oferecer excelência, confiança e inovação incomparáveis em todos os aspectos dos nossos serviços. Seja mantendo sua piscina ou ajudando você a embarcar em uma nova carreira, nossa missão é fornecer soluções excepcionais que atendam às suas necessidades.",
 
   "professionalsTitle": "Conheça Nossos Profissionais",
   "professionalsCta": "Licenciamento Profissional",
@@ -64,7 +64,7 @@
   "footerMission": "Missão",
   "footerLicensing": "Licenciamento",
   "footerContact": "Contato",
-  "footerCopyright": "© {year} UniqSwims. Todos os direitos reservados.",
+  "footerCopyright": "© {year} HABITAT. Todos os direitos reservados.",
   "@footerCopyright": {
     "placeholders": {
       "year": {}
@@ -93,7 +93,7 @@
   "leadWhatsappError": "Não conseguimos abrir o WhatsApp automaticamente. Se preferir, você pode nos chamar diretamente no número (12) 98892-1999.",
   "leadSubmitAnother": "ENVIAR OUTRA SOLICITAÇÃO",
   "leadError": "Ocorreu um erro ao enviar sua solicitação. Por favor, tente novamente.",
-  "leadWhatsappMsg": "Olá UNIQ Swims!\nMeu nome é {name}.\nTenho interesse em: {service}.\nMensagem: {message}",
+  "leadWhatsappMsg": "Olá HABITAT!\nMeu nome é {name}.\nTenho interesse em: {service}.\nMensagem: {message}",
   "@leadWhatsappMsg": {
     "placeholders": {
       "name": {},
@@ -102,7 +102,7 @@
     }
   },
 
-  "maintenanceAppBar": "UNIQ Manutenção",
+  "maintenanceAppBar": "HABITAT Manutenção",
   "maintenanceBadge": "MANUTENÇÃO DE PISCINAS",
   "maintenanceHeroTitle": "Cristalina,\nToda Semana.",
   "maintenanceHeroDesc": "Manutenção completa e recorrente para manter sua piscina impecável — química, limpeza, filtros e relatório de qualidade.",
@@ -120,7 +120,7 @@
   "maintenanceFeatureScheduledDesc": "Planos semanais, quinzenais ou mensais com técnicos certificados e horários fixos.",
   "maintenanceFeaturePreventive": "Cuidado Preventivo",
   "maintenanceFeaturePreventiveDesc": "Identificação antecipada de problemas antes que se tornem reparos caros.",
-  "maintenanceWhyTitle": "Por que UNIQ Manutenção?",
+  "maintenanceWhyTitle": "Por que HABITAT Manutenção?",
   "maintenanceWhyDesc1": "Não somos apenas um serviço de limpeza. Somos parceiros na saúde da sua piscina — com tecnologia, consistência e profissionais certificados.",
   "maintenanceWhyDesc2": "Cada visita é documentada digitalmente. Você recebe um relatório com fotos, parâmetros e histórico completo — total transparência.",
   "maintenanceStatPools": "Piscinas atendidas",
@@ -128,7 +128,7 @@
   "maintenanceStatRating": "Avaliação média",
   "maintenanceStatSupport": "Suporte de emergência",
 
-  "repairsAppBar": "UNIQ Reparos",
+  "repairsAppBar": "HABITAT Reparos",
   "repairsBadge": "REPAROS DE PISCINAS",
   "repairsHeroTitle": "Diagnóstico Rápido.\nConserto Garantido.",
   "repairsHeroDesc": "Diagnóstico rápido e reparos especializados em bombas, filtros, vazamentos e revestimentos — com solução garantida.",
@@ -146,7 +146,7 @@
   "repairsFeatureElectricalDesc": "Reparo e substituição de iluminação subaquática, painéis elétricos e sistemas de automação.",
   "repairsFeatureHeater": "Manutenção de Aquecedores",
   "repairsFeatureHeaterDesc": "Manutenção corretiva em aquecedores a gás, elétricos e solar para conforto durante todo o ano.",
-  "repairsWhyTitle": "Por que confiar na UNIQ Reparos?",
+  "repairsWhyTitle": "Por que confiar na HABITAT Reparos?",
   "repairsWhyDesc1": "Cada reparo começa com um diagnóstico honesto. Sem cobranças desnecessárias — apenas a solução certa, feita da forma certa.",
   "repairsWhyDesc2": "Nossos técnicos são certificados e chegam equipados para resolver na primeira visita. Garantia em todas as peças e mão de obra.",
   "repairsStatFirstVisit": "Resolvido na 1ª visita",
@@ -154,9 +154,9 @@
   "repairsStatWarranty": "Garantia na mão de obra",
   "repairsStatExperience": "Anos de experiência",
 
-  "investmentsAppBar": "UNIQ Investimentos",
+  "investmentsAppBar": "HABITAT Investimentos",
   "investmentsBadge": "OPORTUNIDADES DE NEGÓCIO",
-  "investmentsHeroTitle": "Escalone seu Futuro.\nInvista na UNIQ.",
+  "investmentsHeroTitle": "Escalone seu Futuro.\nInvista na HABITAT.",
   "investmentsHeroDesc": "Descubra modelos de investimento de alta rentabilidade e escalabilidade no mercado de serviços premium para piscinas.",
   "investmentsModelsTitle": "Modelos de Investimento",
   "investmentsRouteOwnership": "Propriedade de Rota",

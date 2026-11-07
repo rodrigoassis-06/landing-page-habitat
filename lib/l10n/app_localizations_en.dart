@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appTitle => 'UniqSwims';
+  String get appTitle => 'HABITAT';
 
   @override
   String get navHome => 'Home';
@@ -37,7 +37,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get heroSubtitle =>
-      'At UNIQ Swims, we transcend traditional maintenance by offering an unparalleled commitment to care and precision.';
+      'At HABITAT, we transcend traditional maintenance by offering an unparalleled commitment to care and precision.';
 
   @override
   String get heroCta => 'Get In Touch';
@@ -47,7 +47,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get aboutDesc1 =>
-      'At UNIQ Swims, we believe your pool should be a haven of relaxation, not a source of concern. Our mission is to deliver exceptional pool and spa maintenance services, ensuring your aquatic spaces remain immaculate and inviting.';
+      'At HABITAT, we believe your pool should be a haven of relaxation, not a source of concern. Our mission is to deliver exceptional pool and spa maintenance services, ensuring your aquatic spaces remain immaculate and inviting.';
 
   @override
   String get aboutDesc2 =>
@@ -81,7 +81,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Discover route options and franchise opportunities designed for investors seeking strong returns and great scalability.';
 
   @override
-  String get whyChooseTitle => 'Why Choose\nUNIQ Swims?';
+  String get whyChooseTitle => 'Why Choose\nHABITAT?';
 
   @override
   String get whyChooseSpecialized => 'Specialized Maintenance';
@@ -109,7 +109,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get whyCommitmentDesc =>
-      'At UNIQ Swims, we are dedicated to delivering unparalleled excellence, trust, and innovation in every aspect of our services. Whether maintaining your pool or assisting you in embarking on a new career path, our mission is to provide exceptional solutions that meet your unique needs.';
+      'At HABITAT, we are dedicated to delivering unparalleled excellence, trust, and innovation in every aspect of our services. Whether maintaining your pool or assisting you in embarking on a new career path, our mission is to provide exceptional solutions that meet your unique needs.';
 
   @override
   String get professionalsTitle => 'Meet Our Professionals';
@@ -183,7 +183,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String footerCopyright(Object year) {
-    return '© $year UniqSwims. All rights reserved.';
+    return '© $year HABITAT. All rights reserved.';
   }
 
   @override
@@ -244,11 +244,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String leadWhatsappMsg(Object name, Object service, Object message) {
-    return 'Hello UNIQ Swims!\nMy name is $name.\nI am interested in: $service.\nMessage: $message';
+    return 'Hello HABITAT!\nMy name is $name.\nI am interested in: $service.\nMessage: $message';
   }
 
   @override
-  String get maintenanceAppBar => 'UNIQ Maintenance';
+  String get maintenanceAppBar => 'HABITAT Maintenance';
 
   @override
   String get maintenanceBadge => 'POOL MAINTENANCE';
@@ -310,7 +310,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Early identification of problems before they become costly repairs.';
 
   @override
-  String get maintenanceWhyTitle => 'Why UNIQ Maintenance?';
+  String get maintenanceWhyTitle => 'Why HABITAT Maintenance?';
 
   @override
   String get maintenanceWhyDesc1 =>
@@ -333,7 +333,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get maintenanceStatSupport => 'Emergency support';
 
   @override
-  String get repairsAppBar => 'UNIQ Repairs';
+  String get repairsAppBar => 'HABITAT Repairs';
 
   @override
   String get repairsBadge => 'POOL REPAIRS';
@@ -395,7 +395,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'Corrective maintenance on gas, electric, and solar heaters for year-round comfort.';
 
   @override
-  String get repairsWhyTitle => 'Why Trust UNIQ Repairs?';
+  String get repairsWhyTitle => 'Why Trust HABITAT Repairs?';
 
   @override
   String get repairsWhyDesc1 =>
@@ -418,13 +418,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get repairsStatExperience => 'Years of experience';
 
   @override
-  String get investmentsAppBar => 'UNIQ Investments';
+  String get investmentsAppBar => 'HABITAT Investments';
 
   @override
   String get investmentsBadge => 'BUSINESS OPPORTUNITIES';
 
   @override
-  String get investmentsHeroTitle => 'Scale Your Future.\nInvest in UNIQ.';
+  String get investmentsHeroTitle => 'Scale Your Future.\nInvest in HABITAT.';
 
   @override
   String get investmentsHeroDesc =>
