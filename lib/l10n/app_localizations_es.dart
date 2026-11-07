@@ -83,25 +83,22 @@ class AppLocalizationsEs extends AppLocalizations {
   String get whyChooseTitle => 'O que entregamos pra você';
 
   @override
-  String get whyChooseSpecialized => 'Mantenimiento Especializado';
+  String get whyChooseSpecialized => 'Posicionamento de Mercado & Autoridade';
 
   @override
-  String get whyChooseSpecializedDesc =>
-      'Gestionamos meticulosamente cada aspecto de su empresa o sistema, garantizando una atención al detalle sin igual.';
+  String get whyChooseSpecializedDesc => 'Criamos marcas que se destacam e comunicam valor imediato, transformando a percepção do seu negócio em autoridade sólida perante os seus clientes.';
 
   @override
-  String get whyChooseInnovation => 'Innovación y Exclusividad';
+  String get whyChooseInnovation => 'Engenharia de Software de Alto Nível';
 
   @override
-  String get whyChooseInnovationDesc =>
-      'Como pioneros de este modelo de negocio en el área de Orlando, ofrecemos una solución distintiva adaptada tanto para propietarios de empresas como para profesionales aspirantes.';
+  String get whyChooseInnovationDesc => 'Desenvolvemos sistemas, aplicativos e plataformas web robustas, construídas com tecnologia moderna e regras de negócio feitas sob medida para sua operação.';
 
   @override
-  String get whyChooseLicensing => 'Licencias Profesionales';
+  String get whyChooseLicensing => 'Operação Eficiente & Processos Automatizados';
 
   @override
-  String get whyChooseLicensingDesc =>
-      'Nuestros programas integrales de certificación y capacitación le permiten construir una carrera exitosa en una industria prometedora.';
+  String get whyChooseLicensingDesc => 'Eliminamos retrabalhos manuais através de fluxos inteligentes e automações que reduzem custos e preparam sua empresa para escalar com segurança.';
 
   @override
   String get whyCommitmentTitle => 'Nuestro Compromiso\ncon la Excelencia';

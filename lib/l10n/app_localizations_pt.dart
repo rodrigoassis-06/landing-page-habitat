@@ -83,25 +83,22 @@ class AppLocalizationsPt extends AppLocalizations {
   String get whyChooseTitle => 'O que entregamos pra você';
 
   @override
-  String get whyChooseSpecialized => 'Estratégia e Identidade Integradas';
+  String get whyChooseSpecialized => 'Posicionamento de Mercado & Autoridade';
 
   @override
-  String get whyChooseSpecializedDesc =>
-      'Sua marca não é tratada de forma fragmentada. O design visual conversa diretamente com a tecnologia e a experiência do cliente.';
+  String get whyChooseSpecializedDesc => 'Criamos marcas que se destacam e comunicam valor imediato, transformando a percepção do seu negócio em autoridade sólida perante os seus clientes.';
 
   @override
-  String get whyChooseInnovation => 'Sistemas 100% Sob Medida';
+  String get whyChooseInnovation => 'Engenharia de Software de Alto Nível';
 
   @override
-  String get whyChooseInnovationDesc =>
-      'Construímos a regra de negócio do zero, sem templates genéricos ou limitações de plataformas engessadas.';
+  String get whyChooseInnovationDesc => 'Desenvolvemos sistemas, aplicativos e plataformas web robustas, construídas com tecnologia moderna e regras de negócio feitas sob medida para sua operação.';
 
   @override
-  String get whyChooseLicensing => 'Suporte Ativo & Sustentação';
+  String get whyChooseLicensing => 'Operação Eficiente & Processos Automatizados';
 
   @override
-  String get whyChooseLicensingDesc =>
-      'Não encerramos a relação no deploy. Cuidamos da estabilidade, segurança e evolução constante do seu projeto.';
+  String get whyChooseLicensingDesc => 'Eliminamos retrabalhos manuais através de fluxos inteligentes e automações que reduzem custos e preparam sua empresa para escalar com segurança.';
 
   @override
   String get whyCommitmentTitle => 'Compromisso com o
