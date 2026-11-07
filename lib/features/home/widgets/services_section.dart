@@ -18,7 +18,6 @@ class ServicesSection extends StatelessWidget {
 
     final services = [
       _ServiceItem(
-        number: '01',
         title: 'Observar',
         description: 'Entendemos seu negócio e o seu público.',
         imagePath: 'assets/images/image-8-hd.png',
@@ -26,7 +25,6 @@ class ServicesSection extends StatelessWidget {
         route: '/contact',
       ),
       _ServiceItem(
-        number: '02',
         title: 'Rastrear',
         description: 'Mapeamos o que o seu projeto precisa de verdade.',
         imagePath: 'assets/images/image-5-hd.png',
@@ -34,7 +32,6 @@ class ServicesSection extends StatelessWidget {
         route: '/contact',
       ),
       _ServiceItem(
-        number: '03',
         title: 'Desenhar',
         description: 'Criamos a marca, o site ou o sistema sob medida.',
         imagePath: 'assets/images/image-7-hd.png',
@@ -42,7 +39,6 @@ class ServicesSection extends StatelessWidget {
         route: '/contact',
       ),
       _ServiceItem(
-        number: '04',
         title: 'Lançar',
         description: 'Colocamos no ar e seguimos junto com você.',
         imagePath: 'assets/images/image-6-hd.png',
@@ -93,7 +89,6 @@ class ServicesSection extends StatelessWidget {
                   itemBuilder: (context, index, realIndex) {
                     final service = services[index];
                     return _ServiceCard(
-                      number: service.number,
                       title: service.title,
                       description: service.description,
                       imagePath: service.imagePath,
@@ -108,7 +103,7 @@ class ServicesSection extends StatelessWidget {
                     viewportFraction: viewportFraction,
                     enableInfiniteScroll: false,
                     enlargeCenterPage: false,
-                    height: itemsToShow == 1 ? 350 : 390,
+                    height: itemsToShow == 1 ? 340 : 380,
                     padEnds: false,
                   ),
                 ),
@@ -128,7 +123,6 @@ class ServicesSection extends StatelessWidget {
 }
 
 class _ServiceCard extends StatelessWidget {
-  final String number;
   final String title;
   final String description;
   final String imagePath;
@@ -139,7 +133,6 @@ class _ServiceCard extends StatelessWidget {
   final TextTheme textTheme;
 
   const _ServiceCard({
-    required this.number,
     required this.title,
     required this.description,
     required this.imagePath,
@@ -179,38 +172,7 @@ class _ServiceCard extends StatelessWidget {
                 width: double.infinity,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      _buildImage(imagePath, alignment),
-                      Positioned(
-                        top: 10,
-                        left: 10,
-                        child: Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 10,
-                            vertical: 4,
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.black.withOpacity(0.65),
-                            borderRadius: BorderRadius.circular(6),
-                            border: Border.all(
-                              color: const Color(0xFFFF7A00).withOpacity(0.6),
-                              width: 1,
-                            ),
-                          ),
-                          child: Text(
-                            number,
-                            style: const TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFFFF7A00),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                  child: _buildImage(imagePath, alignment),
                 ),
               ),
               const SizedBox(height: 14),
@@ -259,7 +221,6 @@ class _ServiceCard extends StatelessWidget {
 }
 
 class _ServiceItem {
-  final String number;
   final String title;
   final String description;
   final String imagePath;
@@ -267,7 +228,6 @@ class _ServiceItem {
   final String route;
 
   const _ServiceItem({
-    required this.number,
     required this.title,
     required this.description,
     required this.imagePath,
