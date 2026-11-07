@@ -67,7 +67,7 @@ class ServicesSection extends StatelessWidget {
         return Container(
           key: sectionKey,
           width: double.infinity,
-          color: frostWhite, // Fundo Branco Geada
+          color: cs.background, // Fundo preto original da aplicação
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 48 : 80,
             horizontal: isMobile ? 20 : 48,
@@ -80,7 +80,7 @@ class ServicesSection extends StatelessWidget {
                 Container(
                   width: 64,
                   height: 4,
-                  color: accentBar,
+                  color: cs.onSurface,
                   margin: const EdgeInsets.only(bottom: 12),
                 ),
                 Text(
@@ -92,7 +92,7 @@ class ServicesSection extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ))
                           .copyWith(
-                            color: darkText,
+                            color: cs.onSurface,
                             fontWeight: FontWeight.w800,
                           ),
                 ),
