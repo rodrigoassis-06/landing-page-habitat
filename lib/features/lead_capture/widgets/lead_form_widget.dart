@@ -221,12 +221,20 @@ class _LeadFormWidgetState extends State<LeadFormWidget> {
                 : ElevatedButton(
                     onPressed: _submitForm,
                     style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.black,
                       padding: const EdgeInsets.symmetric(vertical: 20),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    child: Text(l10n.leadButton),
+                    child: Text(
+                      l10n.leadButton,
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
           ],
         ),

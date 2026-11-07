@@ -145,7 +145,7 @@ Seu Crescimento';
   String get testimonial3Name => 'Thiago Meirelles · CEO & Fundador';
 
   @override
-  String get contactTitle => 'Pronto para Construir o Habitat do Seu Projeto?';
+  String get contactTitle => 'Pronto para desenhar o projeto ideal para você?';
 
   @override
   String get contactOrCall => 'Atendimento Direto & WhatsApp';

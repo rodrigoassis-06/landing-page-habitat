@@ -144,7 +144,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get testimonial3Name => 'Carlos Souza';
 
   @override
-  String get contactTitle => 'Póngase en contacto';
+  String get contactTitle => 'Pronto para desenhar o projeto ideal para você?';
 
   @override
   String get contactOrCall => 'O llámenos';
