@@ -9,12 +9,6 @@ class ServicesSection extends StatelessWidget {
 
   const ServicesSection({Key? key, this.sectionKey, this.onContactPressed}) : super(key: key);
 
-  // Cor "Branco Geada" (Frost White)
-  static const Color frostWhite = Color(0xFFF4F6F9);
-  static const Color darkText = Color(0xFF111827);
-  static const Color mutedText = Color(0xFF4B5563);
-  static const Color accentBar = Color(0xFFFF7A00);
-
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -28,7 +22,6 @@ class ServicesSection extends StatelessWidget {
         description: 'Criamos marcas autorais, universo visual e posicionamento estratégico que transmitem valor imediato e constroem autoridade no seu mercado.',
         imagePath: 'assets/images/servico_identidade.jpg',
         alignment: Alignment.center,
-        fit: BoxFit.cover,
         route: '/contact',
       ),
       _ServiceItem(
@@ -36,7 +29,6 @@ class ServicesSection extends StatelessWidget {
         description: 'Mapeamos gargalos operacionais e desenhamos fluxos inteligentes com automações para economizar tempo, reduzir custos e acelerar sua entrega.',
         imagePath: 'assets/images/servico_processos.jpg',
         alignment: Alignment.center,
-        fit: BoxFit.cover,
         route: '/contact',
       ),
       _ServiceItem(
@@ -44,7 +36,6 @@ class ServicesSection extends StatelessWidget {
         description: 'Desenvolvemos plataformas web, portais de clientes e ERPs/CRMs de ponta a ponta, projetados exatamente para as regras do seu cliente.',
         imagePath: 'assets/images/servico_sistemas.png',
         alignment: Alignment.center,
-        fit: BoxFit.contain,
         route: '/contact',
       ),
       _ServiceItem(
@@ -52,7 +43,6 @@ class ServicesSection extends StatelessWidget {
         description: 'Garantimos acompanhamento técnico contínuo, monitoramento, melhorias constantes e sustentação para que seu ecossistema nunca pare.',
         imagePath: 'assets/images/image-6-hd.png',
         alignment: Alignment.center,
-        fit: BoxFit.cover,
         route: '/contact',
       ),
     ];
@@ -67,9 +57,9 @@ class ServicesSection extends StatelessWidget {
         return Container(
           key: sectionKey,
           width: double.infinity,
-          color: cs.background, // Fundo preto original da aplicação
+          color: cs.background,
           padding: EdgeInsets.symmetric(
-            vertical: isMobile ? 48 : 80,
+            vertical: isMobile ? 36 : 72,
             horizontal: isMobile ? 20 : 48,
           ),
           child: ConstrainedBox(
@@ -91,12 +81,9 @@ class ServicesSection extends StatelessWidget {
                                 fontSize: 34,
                                 fontWeight: FontWeight.bold,
                               ))
-                          .copyWith(
-                            color: cs.onSurface,
-                            fontWeight: FontWeight.w800,
-                          ),
+                          .copyWith(color: cs.onSurface),
                 ),
-                const SizedBox(height: 24),
+                const SizedBox(height: 20),
                 CarouselSlider.builder(
                   itemCount: services.length,
                   itemBuilder: (context, index, realIndex) {
@@ -106,9 +93,9 @@ class ServicesSection extends StatelessWidget {
                       description: service.description,
                       imagePath: service.imagePath,
                       alignment: service.alignment,
-                      fit: service.fit,
                       route: service.route,
                       onTap: onContactPressed,
+                      colorScheme: cs,
                       textTheme: tt,
                     );
                   },
@@ -116,7 +103,7 @@ class ServicesSection extends StatelessWidget {
                     viewportFraction: viewportFraction,
                     enableInfiniteScroll: false,
                     enlargeCenterPage: false,
-                    height: itemsToShow == 1 ? 350 : 390,
+                    height: itemsToShow == 1 ? 340 : 380,
                     padEnds: false,
                   ),
                 ),
@@ -140,9 +127,9 @@ class _ServiceCard extends StatelessWidget {
   final String description;
   final String imagePath;
   final Alignment alignment;
-  final BoxFit fit;
   final String route;
   final VoidCallback? onTap;
+  final ColorScheme colorScheme;
   final TextTheme textTheme;
 
   const _ServiceCard({
@@ -150,9 +137,9 @@ class _ServiceCard extends StatelessWidget {
     required this.description,
     required this.imagePath,
     required this.alignment,
-    this.fit = BoxFit.cover,
     required this.route,
     this.onTap,
+    required this.colorScheme,
     required this.textTheme,
   });
 
@@ -165,13 +152,13 @@ class _ServiceCard extends StatelessWidget {
         onTap: onTap ?? () => context.go(route),
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: const Color(0xFFE2E8F0), width: 1),
+            color: colorScheme.surface,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: colorScheme.onSurface.withOpacity(0.04)),
             boxShadow: [
               BoxShadow(
-                color: const Color(0x14000000),
-                blurRadius: 18,
+                color: Colors.black.withOpacity(0.35),
+                blurRadius: 14,
                 offset: const Offset(0, 6),
               ),
             ],
@@ -185,10 +172,7 @@ class _ServiceCard extends StatelessWidget {
                 width: double.infinity,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
-                  child: Container(
-                    color: const Color(0xFFF1F5F9),
-                    child: _buildImage(imagePath, alignment, fit),
-                  ),
+                  child: _buildImage(imagePath, alignment),
                 ),
               ),
               const SizedBox(height: 14),
@@ -200,17 +184,14 @@ class _ServiceCard extends StatelessWidget {
                               fontSize: 20,
                               fontWeight: FontWeight.w800,
                             ))
-                        .copyWith(
-                          color: const Color(0xFF111827),
-                          fontWeight: FontWeight.w800,
-                        ),
+                        .copyWith(color: colorScheme.onSurface),
               ),
               const SizedBox(height: 8),
               Text(
                 description,
                 style: (textTheme.bodyMedium ?? const TextStyle(fontSize: 14))
                     .copyWith(
-                      color: const Color(0xFF4B5563),
+                      color: colorScheme.onSurface.withOpacity(0.85),
                       height: 1.5,
                     ),
               ),
@@ -221,17 +202,17 @@ class _ServiceCard extends StatelessWidget {
     );
   }
 
-  Widget _buildImage(String cardImgPath, Alignment imgAlignment, BoxFit imgFit) {
+  Widget _buildImage(String cardImgPath, Alignment imgAlignment) {
     return Image.asset(
       cardImgPath,
-      fit: imgFit,
+      fit: BoxFit.cover,
       cacheWidth: 800,
       alignment: imgAlignment,
       errorBuilder: (context, error, stackTrace) {
         return Container(
-          color: const Color(0xFFE2E8F0),
+          color: colorScheme.surface,
           child: const Center(
-            child: Icon(Icons.broken_image, color: Colors.grey, size: 48),
+            child: Icon(Icons.broken_image, color: Colors.white24, size: 48),
           ),
         );
       },
@@ -244,7 +225,6 @@ class _ServiceItem {
   final String description;
   final String imagePath;
   final Alignment alignment;
-  final BoxFit fit;
   final String route;
 
   const _ServiceItem({
@@ -252,7 +232,6 @@ class _ServiceItem {
     required this.description,
     required this.imagePath,
     this.alignment = Alignment.center,
-    this.fit = BoxFit.cover,
     required this.route,
   });
 }
