@@ -43,18 +43,17 @@ class AppLocalizationsEs extends AppLocalizations {
   String get heroCta => 'Póngase en contacto';
 
   @override
-  String get aboutTitle => 'Su Socio de\nConfianza en el\nCuidado de Empresas';
+  String get aboutTitle => 'Mais do que entregar soluções soltas. Entregamos estratégias reais e que realmente funcionam';
 
   @override
-  String get aboutDesc1 =>
-      'En HABITAT, creemos que su empresa debe ser un refugio de relajación, no una fuente de preocupación. Nuestra misión es ofrecer servicios excepcionales de mantenimiento de empresas y sistemas, garantizando que sus esistemacios acuáticos se mantengan impecables y acogedores.';
+  String get aboutDesc1 => 'Entendemos que uma marca forte precisa de uma identidade visual que encante, processos internos ágeis que não gerem desperdício e tecnologia proprietária desenhada para as regras específicas do seu modelo de negócio.';
 
   @override
   String get aboutDesc2 =>
       'Desde el mantenimiento rutinario hasta las reparaciones especializadas, nuestro equipo brinda atención confiable y profesional, asegurando que su empresa se mantenga cristalina y sin preocupaciones para que pueda disfrutar de la tranquilidad que brinda.';
 
   @override
-  String get aboutCta => 'Póngase en contacto';
+  String get aboutCta => 'Conhecer o nosso método';
 
   @override
   String get servicesTitle => 'Nuestros Servicios';

@@ -43,20 +43,17 @@ class AppLocalizationsPt extends AppLocalizations {
   String get heroCta => 'Entre em contato';
 
   @override
-  String get aboutTitle =>
-      'Mais do Que Entregar Soluções Soltas.
-Estruturamos o Habitat da Sua Empresa.';
+  String get aboutTitle => 'Mais do que entregar soluções soltas. Entregamos estratégias reais e que realmente funcionam';
 
   @override
-  String get aboutDesc1 =>
-      'A Habitat é uma agência 360° que integra estratégia, design e tecnologia em um único fluxo. Entendemos que uma marca forte precisa de uma identidade visual que encante, processos internos ágeis que não gerem desperdício e tecnologia proprietária desenhada para as regras específicas do seu modelo de negócio.';
+  String get aboutDesc1 => 'Entendemos que uma marca forte precisa de uma identidade visual que encante, processos internos ágeis que não gerem desperdício e tecnologia proprietária desenhada para as regras específicas do seu modelo de negócio.';
 
   @override
   String get aboutDesc2 =>
       'Não usamos fórmulas prontas. Desenvolvemos sistemas de ponta a ponta — do briefing inicial e arquitetura até o deploy seguro —, além de oferecermos suporte dedicado para que sua empresa continue evoluindo com estabilidade e alta performance.';
 
   @override
-  String get aboutCta => 'CONHECER NOSSO MÉTODO';
+  String get aboutCta => 'Conhecer o nosso método';
 
   @override
   String get servicesTitle => 'Nossos Serviços';

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:uniqswims_lp/l10n/app_localizations.dart';
-import 'package:uniqswims_lp/shared/animations/floating_animation.dart';
 import 'package:uniqswims_lp/shared/animations/hover_scale.dart';
-import 'package:uniqswims_lp/shared/animations/parallax_widget.dart';
 import 'package:uniqswims_lp/shared/animations/reveal_on_scroll.dart';
-import 'package:uniqswims_lp/shared/animations/stagger_reveal.dart';
 
 class AboutSection extends StatelessWidget {
   final String? backgroundImage;
@@ -20,225 +18,132 @@ class AboutSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final colorScheme = theme.colorScheme;
-    final textTheme = theme.textTheme;
     final l10n = AppLocalizations.of(context)!;
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        final isMobile = constraints.maxWidth < 768;
+        final isMobile = constraints.maxWidth < 800;
 
         return Container(
           key: sectionKey,
           width: double.infinity,
-          color: colorScheme.background,
+          color: Colors.white, // Fundo Branco
           padding: EdgeInsets.symmetric(
-            vertical: isMobile ? 40 : 80,
-            horizontal: isMobile ? 20 : 48,
+            vertical: isMobile ? 56 : 100,
+            horizontal: isMobile ? 24 : 48,
           ),
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 1200),
-            child: isMobile
-                ? _buildColumn(context, colorScheme, textTheme, l10n)
-                : _buildRow(context, colorScheme, textTheme, l10n),
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 1200),
+              child: RevealOnScroll(
+                child: isMobile
+                    ? _buildMobileLayout(context, l10n)
+                    : _buildDesktopLayout(context, l10n),
+              ),
+            ),
           ),
         );
       },
     );
   }
 
-  Widget _buildRow(
-    BuildContext context,
-    ColorScheme colorScheme,
-    TextTheme textTheme,
-    AppLocalizations l10n,
-  ) {
+  Widget _buildDesktopLayout(BuildContext context, AppLocalizations l10n) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        // Lado Esquerdo: Título
         Expanded(
-          flex: 1,
-          child: RevealOnScroll(
-            child: ParallaxWidget(
-              movement: 22,
-              child: FloatingAnimation(
-                offset: 8,
-                duration: const Duration(seconds: 5),
-                child: HoverScale(
-                  scale: 1.04,
-                  child: _buildImageCard(context, colorScheme),
-                ),
-              ),
+          flex: 6,
+          child: Text(
+            l10n.aboutTitle,
+            style: GoogleFonts.montserrat(
+              fontSize: 38,
+              fontWeight: FontWeight.w800,
+              color: const Color(0xFF111827),
+              height: 1.2,
+              letterSpacing: -0.5,
             ),
           ),
         ),
-        const SizedBox(width: 40),
+        const SizedBox(width: 64),
+        // Lado Direito: Texto Descritivo + Botão
         Expanded(
-          flex: 1,
-          child: _buildTextContent(
-            context,
-            colorScheme,
-            textTheme,
-            TextAlign.left,
-            l10n,
+          flex: 5,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                l10n.aboutDesc1,
+                style: GoogleFonts.inter(
+                  fontSize: 17,
+                  color: const Color(0xFF374151),
+                  height: 1.65,
+                ),
+              ),
+              const SizedBox(height: 32),
+              _buildButton(context, l10n),
+            ],
           ),
         ),
       ],
     );
   }
 
-  Widget _buildColumn(
-    BuildContext context,
-    ColorScheme colorScheme,
-    TextTheme textTheme,
-    AppLocalizations l10n,
-  ) {
+  Widget _buildMobileLayout(BuildContext context, AppLocalizations l10n) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        RevealOnScroll(
-          child: ParallaxWidget(
-            movement: 22,
-            child: FloatingAnimation(
-              offset: 8,
-              duration: const Duration(seconds: 5),
-              child: HoverScale(
-                scale: 1.04,
-                child: _buildImageCard(context, colorScheme),
-              ),
-            ),
-          ),
-        ),
-        const SizedBox(height: 24),
-        _buildTextContent(context, colorScheme, textTheme, TextAlign.center, l10n),
-      ],
-    );
-  }
-
-  Widget _buildImageCard(BuildContext context, ColorScheme colorScheme) {
-    final hasImage = backgroundImage != null && backgroundImage!.isNotEmpty;
-
-    return AspectRatio(
-      aspectRatio: 9 / 12,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(12),
-        child: Container(
-          color: colorScheme.surface,
-          child: hasImage
-              ? DecoratedBox(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: backgroundImage!.startsWith('http')
-                          ? NetworkImage(backgroundImage!)
-                          : AssetImage(backgroundImage!) as ImageProvider,
-                      fit: BoxFit.cover,
-                      colorFilter: ColorFilter.mode(
-                        Colors.black.withOpacity(0.55),
-                        BlendMode.darken,
-                      ),
-                    ),
-                  ),
-                )
-              : Center(
-                  child: Icon(
-                    Icons.hub_outlined,
-                    size: 56,
-                    color: colorScheme.onSurface.withOpacity(0.9),
-                  ),
-                ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildTextContent(
-    BuildContext context,
-    ColorScheme colorScheme,
-    TextTheme textTheme,
-    TextAlign align,
-    AppLocalizations l10n,
-  ) {
-    final crossAxisAlignment = align == TextAlign.left
-        ? CrossAxisAlignment.start
-        : CrossAxisAlignment.center;
-
-    final alignment = align == TextAlign.left
-        ? Alignment.centerLeft
-        : Alignment.center;
-
-    return StaggerReveal(
-      crossAxisAlignment: crossAxisAlignment,
-      children: [
-        Align(
-          alignment: alignment,
-          child: TweenAnimationBuilder<double>(
-            duration: const Duration(milliseconds: 700),
-            curve: Curves.easeOutCubic,
-            tween: Tween(begin: 0, end: 64),
-            builder: (context, width, child) {
-              return Container(
-                width: width,
-                height: 4,
-                margin: const EdgeInsets.only(bottom: 12),
-                decoration: BoxDecoration(
-                  color: colorScheme.onSurface,
-                  borderRadius: BorderRadius.circular(50),
-                ),
-              );
-            },
-          ),
-        ),
         Text(
           l10n.aboutTitle,
-          textAlign: align,
-          style:
-              (textTheme.headlineMedium ??
-                      const TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold,
-                      ))
-                  .copyWith(color: colorScheme.onSurface, height: 1.05),
-        ),
-        const SizedBox(height: 16),
-        Text(
-          l10n.aboutDesc1,
-          textAlign: align,
-          style: (textTheme.bodyLarge ?? const TextStyle(fontSize: 16))
-              .copyWith(
-                color: colorScheme.onSurface.withOpacity(.95),
-                height: 1.6,
-              ),
-        ),
-        const SizedBox(height: 18),
-        Text(
-          l10n.aboutDesc2,
-          textAlign: align,
-          style: (textTheme.bodyMedium ?? const TextStyle(fontSize: 15))
-              .copyWith(
-                color: colorScheme.onSurface.withOpacity(.8),
-                height: 1.6,
-              ),
-        ),
-        const SizedBox(height: 22),
-        Align(
-          alignment: alignment,
-          child: HoverScale(
-            scale: 1.02,
-            child: OutlinedButton.icon(
-              onPressed: onContactPressed,
-              icon: const Icon(Icons.arrow_forward, size: 18),
-              label: Text(l10n.aboutCta),
-              style: OutlinedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 22,
-                  vertical: 14,
-                ),
-              ),
-            ),
+          style: GoogleFonts.montserrat(
+            fontSize: 28,
+            fontWeight: FontWeight.w800,
+            color: const Color(0xFF111827),
+            height: 1.25,
+            letterSpacing: -0.3,
           ),
         ),
+        const SizedBox(height: 20),
+        Text(
+          l10n.aboutDesc1,
+          style: GoogleFonts.inter(
+            fontSize: 16,
+            color: const Color(0xFF374151),
+            height: 1.6,
+          ),
+        ),
+        const SizedBox(height: 28),
+        _buildButton(context, l10n),
       ],
+    );
+  }
+
+  Widget _buildButton(BuildContext context, AppLocalizations l10n) {
+    return HoverScale(
+      scale: 1.02,
+      child: OutlinedButton.icon(
+        onPressed: onContactPressed,
+        icon: const Icon(Icons.arrow_forward, size: 18),
+        label: Text(
+          l10n.aboutCta,
+          style: GoogleFonts.montserrat(
+            fontSize: 14,
+            fontWeight: FontWeight.w700,
+            letterSpacing: 0.5,
+          ),
+        ),
+        style: OutlinedButton.styleFrom(
+          foregroundColor: const Color(0xFF111827),
+          side: const BorderSide(color: Color(0xFF111827), width: 1.5),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 24,
+            vertical: 16,
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+          ),
+        ),
+      ),
     );
   }
 }
