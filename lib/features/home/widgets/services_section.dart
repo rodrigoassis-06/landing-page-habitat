@@ -34,7 +34,7 @@ class ServicesSection extends StatelessWidget {
       _ServiceItem(
         title: 'Sistemas Sob Medida',
         description: 'Desenvolvemos plataformas web, portais de clientes e ERPs/CRMs de ponta a ponta, projetados exatamente para as regras do seu cliente.',
-        imagePath: 'assets/images/servico_sistemas.png',
+        imagePath: 'assets/images/servico_sistemas.jpg',
         alignment: Alignment.center,
         route: '/contact',
       ),
@@ -203,19 +203,22 @@ class _ServiceCard extends StatelessWidget {
   }
 
   Widget _buildImage(String cardImgPath, Alignment imgAlignment) {
-    return Image.asset(
-      cardImgPath,
-      fit: BoxFit.cover,
-      cacheWidth: 800,
-      alignment: imgAlignment,
-      errorBuilder: (context, error, stackTrace) {
-        return Container(
-          color: colorScheme.surface,
-          child: const Center(
-            child: Icon(Icons.broken_image, color: Colors.white24, size: 48),
-          ),
-        );
-      },
+    return ColorFiltered(
+      colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.saturation),
+      child: Image.asset(
+        cardImgPath,
+        fit: BoxFit.cover,
+        cacheWidth: 800,
+        alignment: imgAlignment,
+        errorBuilder: (context, error, stackTrace) {
+          return Container(
+            color: colorScheme.surface,
+            child: const Center(
+              child: Icon(Icons.broken_image, color: Colors.white24, size: 48),
+            ),
+          );
+        },
+      ),
     );
   }
 }
