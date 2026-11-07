@@ -43,19 +43,17 @@ class AppLocalizationsPt extends AppLocalizations {
   String get heroCta => 'Entre em contato';
 
   @override
-  String get aboutTitle =>
-      'Seu Parceiro de\nConfiança em\nCuidados com Piscina';
+  String get aboutTitle => 'Mais do Que Entregar Soluções Soltas.
+Estruturamos o Habitat da Sua Empresa.';
 
   @override
-  String get aboutDesc1 =>
-      'Na HABITAT, acreditamos que sua piscina deve ser um refúgio de relaxamento, não uma fonte de preocupação. Nossa missão é oferecer serviços excepcionais de manutenção de piscinas e spas, garantindo que seus espaços aquáticos permaneçam impecáveis e convidativos.';
+  String get aboutDesc1 => 'A Habitat é uma agência 360° que integra estratégia, design e tecnologia em um único fluxo. Entendemos que uma marca forte precisa de uma identidade visual que encante, processos internos ágeis que não gerem desperdício e tecnologia proprietária desenhada para as regras específicas do seu modelo de negócio.';
 
   @override
-  String get aboutDesc2 =>
-      'Da manutenção de rotina aos reparos especializados, nossa equipe oferece atendimento confiável e profissional, garantindo que sua piscina permaneça cristalina e sem preocupações para que você possa aproveitar a tranquilidade que ela proporciona.';
+  String get aboutDesc2 => 'Não usamos fórmulas prontas. Desenvolvemos sistemas de ponta a ponta — do briefing inicial e arquitetura até o deploy seguro —, além de oferecermos suporte dedicado para que sua empresa continue evoluindo com estabilidade e alta performance.';
 
   @override
-  String get aboutCta => 'Entre em contato';
+  String get aboutCta => 'CONHECER NOSSO MÉTODO';
 
   @override
   String get servicesTitle => 'Nossos Serviços';
@@ -82,35 +80,33 @@ class AppLocalizationsPt extends AppLocalizations {
       'Descubra opções de rotas e oportunidades de franquias projetadas para investidores buscando retornos fortes e grande escalabilidade.';
 
   @override
-  String get whyChooseTitle => 'Por que Escolher\na HABITAT?';
+  String get whyChooseTitle => 'Por Que Construir Seu Projeto
+com a Habitat?';
 
   @override
-  String get whyChooseSpecialized => 'Manutenção Especializada';
+  String get whyChooseSpecialized => 'Estratégia e Identidade Integradas';
 
   @override
-  String get whyChooseSpecializedDesc =>
-      'Gerenciamos meticulosamente cada aspecto da sua piscina ou spa, garantindo atenção aos detalhes sem igual.';
+  String get whyChooseSpecializedDesc => 'Sua marca não é tratada de forma fragmentada. O design visual conversa diretamente com a tecnologia e a experiência do cliente.';
 
   @override
-  String get whyChooseInnovation => 'Inovação e Exclusividade';
+  String get whyChooseInnovation => 'Sistemas 100% Sob Medida';
 
   @override
-  String get whyChooseInnovationDesc =>
-      'Como pioneiros deste modelo de negócio na região de Orlando, oferecemos uma solução diferenciada tanto para proprietários de piscinas quanto para profissionais aspirantes.';
+  String get whyChooseInnovationDesc => 'Construímos a regra de negócio do zero, sem templates genéricos ou limitações de plataformas engessadas.';
 
   @override
-  String get whyChooseLicensing => 'Licenciamento Profissional';
+  String get whyChooseLicensing => 'Suporte Ativo & Sustentação';
 
   @override
-  String get whyChooseLicensingDesc =>
-      'Nossos programas abrangentes de certificação e treinamento capacitam você a construir uma carreira de sucesso em um setor promissor.';
+  String get whyChooseLicensingDesc => 'Não encerramos a relação no deploy. Cuidamos da estabilidade, segurança e evolução constante do seu projeto.';
 
   @override
-  String get whyCommitmentTitle => 'Nosso Compromisso\ncom a Excelência';
+  String get whyCommitmentTitle => 'Compromisso com o
+Seu Crescimento';
 
   @override
-  String get whyCommitmentDesc =>
-      'Na HABITAT, somos dedicados a oferecer excelência, confiança e inovação incomparáveis em todos os aspectos dos nossos serviços. Seja mantendo sua piscina ou ajudando você a embarcar em uma nova carreira, nossa missão é fornecer soluções excepcionais que atendam às suas necessidades.';
+  String get whyCommitmentDesc => 'Nosso objetivo é transformar complexidade em fluidez: marcas que vendem mais, processos que operam sem atrito e sistemas confiáveis que escalam com você.';
 
   @override
   String get professionalsTitle => 'Conheça Nossos Profissionais';
@@ -128,35 +124,34 @@ class AppLocalizationsPt extends AppLocalizations {
   String get professionalsRoleLicensee => 'Licenciado';
 
   @override
-  String get testimonialsTitle => 'O que nossos clientes dizem';
+  String get testimonialsTitle => 'O Que Nossos Clientes Dizem';
 
   @override
-  String get testimonial1Text => 'Excelente serviço! Super recomendo.';
+  String get testimonial1Text => 'O sistema sob medida desenvolvido pela Habitat substituiu planilhas manuais e reduziu o tempo dos nossos processos em 60%. O suporte técnico deles pós-lançamento é impecável.';
 
   @override
-  String get testimonial1Name => 'João Silva';
+  String get testimonial1Name => 'Roberto Faria · Diretor de Operações';
 
   @override
-  String get testimonial2Text => 'Atendimento rápido e profissional.';
+  String get testimonial2Text => 'A reformulação completa da nossa identidade e o novo portal digital posicionaram nossa marca como referência no setor. A Habitat entendeu nossa essência desde a primeira reunião.';
 
   @override
-  String get testimonial2Name => 'Maria Oliveira';
+  String get testimonial2Name => 'Camila Duarte · Head de Marketing';
 
   @override
-  String get testimonial3Text => 'Produto de alta qualidade!';
+  String get testimonial3Text => 'Ter branding, otimização de fluxo e engenharia de software sob o mesmo teto economizou meses de trabalho. A Habitat é o braço direito da nossa expansão.';
 
   @override
-  String get testimonial3Name => 'Carlos Souza';
+  String get testimonial3Name => 'Thiago Meirelles · CEO & Fundador';
 
   @override
-  String get contactTitle => 'Entre em contato';
+  String get contactTitle => 'Pronto para Construir o Habitat do Seu Projeto?';
 
   @override
-  String get contactOrCall => 'Ou ligue para nós';
+  String get contactOrCall => 'Atendimento Direto & WhatsApp';
 
   @override
-  String get footerCompanyDesc =>
-      'Estamos comprometidos em oferecer serviços excepcionais, priorizando a satisfação do cliente e mantendo os mais altos padrões de segurança.';
+  String get footerCompanyDesc => 'HABITAT · Construção de Identidade, Otimização de Processos e Sistemas Sob Medida de Ponta a Ponta com Suporte Contínuo.';
 
   @override
   String get footerCompany => 'Empresa';
@@ -165,27 +160,25 @@ class AppLocalizationsPt extends AppLocalizations {
   String get footerSocial => 'Redes Sociais';
 
   @override
-  String get footerAbout => 'Sobre';
+  String get footerAbout => 'Sobre Nós';
 
   @override
   String get footerServices => 'Serviços';
 
   @override
-  String get footerClients => 'Clientes';
+  String get footerClients => 'Casos de Sucesso';
 
   @override
-  String get footerMission => 'Missão';
+  String get footerMission => 'Metodologia';
 
   @override
-  String get footerLicensing => 'Licenciamento';
+  String get footerLicensing => 'Sistemas & Suporte';
 
   @override
   String get footerContact => 'Contato';
 
   @override
-  String footerCopyright(Object year) {
-    return '© $year HABITAT. Todos os direitos reservados.';
-  }
+  String footerCopyright(Object year) { return '© $year Habitat. Todos os direitos reservados.'; }
 
   @override
   String get footerMadeBy => 'Feito com Flutter • Gabriel Morais';
@@ -194,7 +187,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get footerTerms => '• Termos e Condições';
 
   @override
-  String get leadTitle => 'Solicite um Orçamento';
+  String get leadTitle => 'Solicite uma Proposta Sob Medida';
 
   @override
   String get leadName => 'Nome Completo';
@@ -212,16 +205,16 @@ class AppLocalizationsPt extends AppLocalizations {
   String get leadMessage => 'Mensagem (Opcional)';
 
   @override
-  String get leadServiceMaintenance => 'Manutenção';
+  String get leadServiceMaintenance => 'Construção de Identidade';
 
   @override
-  String get leadServiceRepairs => 'Reparos';
+  String get leadServiceRepairs => 'Otimização de Processos';
 
   @override
-  String get leadServiceInvestments => 'Investimentos';
+  String get leadServiceInvestments => 'Sistemas Sob Medida & Suporte';
 
   @override
-  String get leadButton => 'ENVIAR INTERESSE PARA WHATSAPP';
+  String get leadButton => 'SOLICITAR DIAGNÓSTICO';
 
   @override
   String leadSuccessTitle(Object name) {
@@ -229,8 +222,7 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get leadSuccessMessage =>
-      'Recebemos sua solicitação. Nossa equipe entrará em contato em breve.';
+  String get leadSuccessMessage => 'Recebemos sua mensagem! Nossa equipe entrará em contato para entender sua demanda de identidade, processos ou sistema sob medida.';
 
   @override
   String get leadWhatsappError =>
@@ -519,19 +511,17 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   String get heroCta => 'Entre em contato';
 
   @override
-  String get aboutTitle =>
-      'Seu Parceiro de\nConfiança em\nCuidados com Piscina';
+  String get aboutTitle => 'Mais do Que Entregar Soluções Soltas.
+Estruturamos o Habitat da Sua Empresa.';
 
   @override
-  String get aboutDesc1 =>
-      'Na HABITAT, acreditamos que sua piscina deve ser um refúgio de relaxamento, não uma fonte de preocupação. Nossa missão é oferecer serviços excepcionais de manutenção de piscinas e spas, garantindo que seus espaços aquáticos permaneçam impecáveis e convidativos.';
+  String get aboutDesc1 => 'A Habitat é uma agência 360° que integra estratégia, design e tecnologia em um único fluxo. Entendemos que uma marca forte precisa de uma identidade visual que encante, processos internos ágeis que não gerem desperdício e tecnologia proprietária desenhada para as regras específicas do seu modelo de negócio.';
 
   @override
-  String get aboutDesc2 =>
-      'Da manutenção de rotina aos reparos especializados, nossa equipe oferece atendimento confiável e profissional, garantindo que sua piscina permaneça cristalina e sem preocupações para que você possa aproveitar a tranquilidade que ela proporciona.';
+  String get aboutDesc2 => 'Não usamos fórmulas prontas. Desenvolvemos sistemas de ponta a ponta — do briefing inicial e arquitetura até o deploy seguro —, além de oferecermos suporte dedicado para que sua empresa continue evoluindo com estabilidade e alta performance.';
 
   @override
-  String get aboutCta => 'Entre em contato';
+  String get aboutCta => 'CONHECER NOSSO MÉTODO';
 
   @override
   String get servicesTitle => 'Nossos Serviços';
@@ -558,35 +548,33 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
       'Descubra opções de rotas e oportunidades de franquias projetadas para investidores buscando retornos fortes e grande escalabilidade.';
 
   @override
-  String get whyChooseTitle => 'Por que Escolher\na HABITAT?';
+  String get whyChooseTitle => 'Por Que Construir Seu Projeto
+com a Habitat?';
 
   @override
-  String get whyChooseSpecialized => 'Manutenção Especializada';
+  String get whyChooseSpecialized => 'Estratégia e Identidade Integradas';
 
   @override
-  String get whyChooseSpecializedDesc =>
-      'Gerenciamos meticulosamente cada aspecto da sua piscina ou spa, garantindo atenção aos detalhes sem igual.';
+  String get whyChooseSpecializedDesc => 'Sua marca não é tratada de forma fragmentada. O design visual conversa diretamente com a tecnologia e a experiência do cliente.';
 
   @override
-  String get whyChooseInnovation => 'Inovação e Exclusividade';
+  String get whyChooseInnovation => 'Sistemas 100% Sob Medida';
 
   @override
-  String get whyChooseInnovationDesc =>
-      'Como pioneiros deste modelo de negócio na região de Orlando, oferecemos uma solução diferenciada tanto para proprietários de piscinas quanto para profissionais aspirantes.';
+  String get whyChooseInnovationDesc => 'Construímos a regra de negócio do zero, sem templates genéricos ou limitações de plataformas engessadas.';
 
   @override
-  String get whyChooseLicensing => 'Licenciamento Profissional';
+  String get whyChooseLicensing => 'Suporte Ativo & Sustentação';
 
   @override
-  String get whyChooseLicensingDesc =>
-      'Nossos programas abrangentes de certificação e treinamento capacitam você a construir uma carreira de sucesso em um setor promissor.';
+  String get whyChooseLicensingDesc => 'Não encerramos a relação no deploy. Cuidamos da estabilidade, segurança e evolução constante do seu projeto.';
 
   @override
-  String get whyCommitmentTitle => 'Nosso Compromisso\ncom a Excelência';
+  String get whyCommitmentTitle => 'Compromisso com o
+Seu Crescimento';
 
   @override
-  String get whyCommitmentDesc =>
-      'Na HABITAT, somos dedicados a oferecer excelência, confiança e inovação incomparáveis em todos os aspectos dos nossos serviços. Seja mantendo sua piscina ou ajudando você a embarcar em uma nova carreira, nossa missão é fornecer soluções excepcionais que atendam às suas necessidades.';
+  String get whyCommitmentDesc => 'Nosso objetivo é transformar complexidade em fluidez: marcas que vendem mais, processos que operam sem atrito e sistemas confiáveis que escalam com você.';
 
   @override
   String get professionalsTitle => 'Conheça Nossos Profissionais';
@@ -604,35 +592,34 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   String get professionalsRoleLicensee => 'Licenciado';
 
   @override
-  String get testimonialsTitle => 'O que nossos clientes dizem';
+  String get testimonialsTitle => 'O Que Nossos Clientes Dizem';
 
   @override
-  String get testimonial1Text => 'Excelente serviço! Super recomendo.';
+  String get testimonial1Text => 'O sistema sob medida desenvolvido pela Habitat substituiu planilhas manuais e reduziu o tempo dos nossos processos em 60%. O suporte técnico deles pós-lançamento é impecável.';
 
   @override
-  String get testimonial1Name => 'João Silva';
+  String get testimonial1Name => 'Roberto Faria · Diretor de Operações';
 
   @override
-  String get testimonial2Text => 'Atendimento rápido e profissional.';
+  String get testimonial2Text => 'A reformulação completa da nossa identidade e o novo portal digital posicionaram nossa marca como referência no setor. A Habitat entendeu nossa essência desde a primeira reunião.';
 
   @override
-  String get testimonial2Name => 'Maria Oliveira';
+  String get testimonial2Name => 'Camila Duarte · Head de Marketing';
 
   @override
-  String get testimonial3Text => 'Produto de alta qualidade!';
+  String get testimonial3Text => 'Ter branding, otimização de fluxo e engenharia de software sob o mesmo teto economizou meses de trabalho. A Habitat é o braço direito da nossa expansão.';
 
   @override
-  String get testimonial3Name => 'Carlos Souza';
+  String get testimonial3Name => 'Thiago Meirelles · CEO & Fundador';
 
   @override
-  String get contactTitle => 'Entre em contato';
+  String get contactTitle => 'Pronto para Construir o Habitat do Seu Projeto?';
 
   @override
-  String get contactOrCall => 'Ou ligue para nós';
+  String get contactOrCall => 'Atendimento Direto & WhatsApp';
 
   @override
-  String get footerCompanyDesc =>
-      'Estamos comprometidos em oferecer serviços excepcionais, priorizando a satisfação do cliente e mantendo os mais altos padrões de segurança.';
+  String get footerCompanyDesc => 'HABITAT · Construção de Identidade, Otimização de Processos e Sistemas Sob Medida de Ponta a Ponta com Suporte Contínuo.';
 
   @override
   String get footerCompany => 'Empresa';
@@ -641,27 +628,25 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   String get footerSocial => 'Redes Sociais';
 
   @override
-  String get footerAbout => 'Sobre';
+  String get footerAbout => 'Sobre Nós';
 
   @override
   String get footerServices => 'Serviços';
 
   @override
-  String get footerClients => 'Clientes';
+  String get footerClients => 'Casos de Sucesso';
 
   @override
-  String get footerMission => 'Missão';
+  String get footerMission => 'Metodologia';
 
   @override
-  String get footerLicensing => 'Licenciamento';
+  String get footerLicensing => 'Sistemas & Suporte';
 
   @override
   String get footerContact => 'Contato';
 
   @override
-  String footerCopyright(Object year) {
-    return '© $year HABITAT. Todos os direitos reservados.';
-  }
+  String footerCopyright(Object year) { return '© $year Habitat. Todos os direitos reservados.'; }
 
   @override
   String get footerMadeBy => 'Feito com Flutter • Gabriel Morais';
@@ -670,7 +655,7 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   String get footerTerms => '• Termos e Condições';
 
   @override
-  String get leadTitle => 'Solicite um Orçamento';
+  String get leadTitle => 'Solicite uma Proposta Sob Medida';
 
   @override
   String get leadName => 'Nome Completo';
@@ -688,16 +673,16 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   String get leadMessage => 'Mensagem (Opcional)';
 
   @override
-  String get leadServiceMaintenance => 'Manutenção';
+  String get leadServiceMaintenance => 'Construção de Identidade';
 
   @override
-  String get leadServiceRepairs => 'Reparos';
+  String get leadServiceRepairs => 'Otimização de Processos';
 
   @override
-  String get leadServiceInvestments => 'Investimentos';
+  String get leadServiceInvestments => 'Sistemas Sob Medida & Suporte';
 
   @override
-  String get leadButton => 'ENVIAR INTERESSE PARA WHATSAPP';
+  String get leadButton => 'SOLICITAR DIAGNÓSTICO';
 
   @override
   String leadSuccessTitle(Object name) {
@@ -705,8 +690,7 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
   }
 
   @override
-  String get leadSuccessMessage =>
-      'Recebemos sua solicitação. Nossa equipe entrará em contato em breve.';
+  String get leadSuccessMessage => 'Recebemos sua mensagem! Nossa equipe entrará em contato para entender sua demanda de identidade, processos ou sistema sob medida.';
 
   @override
   String get leadWhatsappError =>

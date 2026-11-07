@@ -18,29 +18,29 @@ class ServicesSection extends StatelessWidget {
 
     final services = [
       _ServiceItem(
-        title: 'Observar',
-        description: 'Entendemos seu negócio e o seu público.',
+        title: 'Construção de Identidade',
+        description: 'Criamos marcas autorais, universo visual e posicionamento estratégico que transmitem valor imediato e constroem autoridade no seu mercado.',
         imagePath: 'assets/images/image-8-hd.png',
         alignment: Alignment.bottomCenter,
         route: '/contact',
       ),
       _ServiceItem(
-        title: 'Rastrear',
-        description: 'Mapeamos o que o seu projeto precisa de verdade.',
+        title: 'Otimização de Processos',
+        description: 'Mapeamos gargalos operacionais e desenhamos fluxos inteligentes com automações para economizar tempo, reduzir custos e acelerar sua entrega.',
         imagePath: 'assets/images/image-5-hd.png',
         alignment: Alignment.center,
         route: '/contact',
       ),
       _ServiceItem(
-        title: 'Desenhar',
-        description: 'Criamos a marca, o site ou o sistema sob medida.',
+        title: 'Sistemas Sob Medida',
+        description: 'Desenvolvemos plataformas web, portais de clientes e ERPs/CRMs de ponta a ponta, projetados exatamente para as regras do seu cliente.',
         imagePath: 'assets/images/image-7-hd.png',
         alignment: Alignment.center,
         route: '/contact',
       ),
       _ServiceItem(
-        title: 'Lançar',
-        description: 'Colocamos no ar e seguimos junto com você.',
+        title: 'Suporte & Evolução',
+        description: 'Garantimos acompanhamento técnico contínuo, monitoramento, melhorias constantes e sustentação para que seu ecossistema nunca pare.',
         imagePath: 'assets/images/image-6-hd.png',
         alignment: Alignment.center,
         route: '/contact',
