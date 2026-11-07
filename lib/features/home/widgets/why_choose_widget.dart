@@ -81,7 +81,7 @@ class WhyChooseWidget extends StatelessWidget {
       children: [
         // Reasons list (without side icons and with larger text)
         Expanded(
-          flex: 7,
+          flex: 6,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: reasons
@@ -92,15 +92,15 @@ class WhyChooseWidget extends StatelessWidget {
                 .toList(),
           ),
         ),
-        const SizedBox(width: 48),
-        // Phone mockup on right side
+        const SizedBox(width: 40),
+        // Phone mockup on right side (ampliado)
         Expanded(
           flex: 5,
           child: Center(
             child: Image.asset(
               'assets/images/mockup_celular.png',
               fit: BoxFit.contain,
-              height: 440,
+              height: 520,
             ),
           ),
         ),
@@ -116,7 +116,7 @@ class WhyChooseWidget extends StatelessWidget {
           child: Image.asset(
             'assets/images/mockup_celular.png',
             fit: BoxFit.contain,
-            height: 320,
+            height: 380,
           ),
         ),
         const SizedBox(height: 32),
