@@ -6,6 +6,7 @@ import 'package:uniqswims_lp/features/home/widgets/services_section.dart';
 import 'package:uniqswims_lp/features/home/widgets/hero_section.dart';
 import 'package:uniqswims_lp/features/home/widgets/about_section.dart';
 import 'package:uniqswims_lp/features/home/widgets/why_choose_widget.dart';
+import 'package:uniqswims_lp/features/home/widgets/closing_cta_section.dart';
 import 'package:uniqswims_lp/features/home/widgets/contact_section.dart';
 import 'package:uniqswims_lp/shared/app_bar_hide.dart';
 import 'package:uniqswims_lp/shared/locale/language_selector.dart';
@@ -128,6 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 AboutSection(backgroundImage: 'assets/images/about.jpeg', sectionKey: _aboutKey, onContactPressed: () => _scrollToKey(_contactKey)),
                 ServicesSection(sectionKey: _servicesKey, onContactPressed: () => _scrollToKey(_contactKey)),
                 WhyChooseWidget(sectionKey: _whyChooseKey),
+                ClosingCtaSection(onContactPressed: () => _scrollToKey(_contactKey)),
                 TestimonialsSection(sectionKey: _testimonialsKey),
                 ContactSection(sectionKey: _contactKey,),
               ],
