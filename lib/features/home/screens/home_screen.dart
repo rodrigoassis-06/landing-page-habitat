@@ -130,15 +130,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 WhyChooseWidget(sectionKey: _whyChooseKey),
                 TestimonialsSection(sectionKey: _testimonialsKey),
                 ContactSection(sectionKey: _contactKey,),
-                Footer(
-                  linkActions: {
-                    'contact': () => _scrollToKey(_contactKey),
-                  },
-                  socialLinksOverride: {
-                    'linkedin': 'https://linkedin.com/company/habitatmedia',
-                    'instagram': 'https://instagram.com/habitatmedia',
-                  },
-                ),
               ],
             ),
           );
