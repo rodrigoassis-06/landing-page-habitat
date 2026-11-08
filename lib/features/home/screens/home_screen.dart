@@ -82,7 +82,6 @@ class _HomeScreenState extends State<HomeScreen> {
         title: l10n.appTitle,
         // actions: usamos um LayoutBuilder para trocar entre menu popup (mobile) e botões (desktop)
         actions: [
-          const LanguageSelector(),
           LayoutBuilder(builder: (context, constraints) {
             final isNarrow = constraints.maxWidth < 700;
             if (isNarrow) {
