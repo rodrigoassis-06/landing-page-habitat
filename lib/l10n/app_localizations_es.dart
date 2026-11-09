@@ -36,6 +36,21 @@ class AppLocalizationsEs extends AppLocalizations {
   String get heroTitle => 'UN NUEVO CONCEPTO\nEN CUIDADO DE PISCINAS';
 
   @override
+  String get heroEyebrow => 'AGENCIA 360° · IDENTIDAD · SITIOS · SISTEMAS';
+
+  @override
+  String get heroTitleLine1 => 'UN NUEVO CONCEPTO';
+
+  @override
+  String get heroTitleLine3 => 'EN 360°';
+
+  @override
+  String get heroCtaPrimary => 'INICIAR PROYECTO';
+
+  @override
+  String get heroCtaSecondary => 'VER PORTAFOLIO';
+
+  @override
   String get heroSubtitle =>
       'En HABITAT, trascendemos el mantenimiento tradicional ofreciendo un compromiso inigualable con el cuidado y la precisión.';
 
@@ -43,30 +58,31 @@ class AppLocalizationsEs extends AppLocalizations {
   String get heroCta => 'Póngase en contacto';
 
   @override
-  String get aboutTitle => 'Mais do que entregar soluções soltas. Entregamos estratégias reais e que realmente funcionam';
+  String get aboutTitle => 'Su Socio de\nConfianza en el\nCuidado de Piscinas';
 
   @override
-  String get aboutDesc1 => 'Entendemos que uma marca forte precisa de uma identidade visual que encante, processos internos ágeis que não gerem desperdício e tecnologia proprietária desenhada para as regras específicas do seu modelo de negócio.';
+  String get aboutDesc1 =>
+      'En HABITAT, creemos que su piscina debe ser un refugio de relajación, no una fuente de preocupación. Nuestra misión es ofrecer servicios excepcionales de mantenimiento de piscinas y spas, garantizando que sus espacios acuáticos se mantengan impecables y acogedores.';
 
   @override
   String get aboutDesc2 =>
-      'Desde el mantenimiento rutinario hasta las reparaciones especializadas, nuestro equipo brinda atención confiable y profesional, asegurando que su empresa se mantenga cristalina y sin preocupaciones para que pueda disfrutar de la tranquilidad que brinda.';
+      'Desde el mantenimiento rutinario hasta las reparaciones especializadas, nuestro equipo brinda atención confiable y profesional, asegurando que su piscina se mantenga cristalina y sin preocupaciones para que pueda disfrutar de la tranquilidad que brinda.';
 
   @override
-  String get aboutCta => 'Conhecer o nosso método';
+  String get aboutCta => 'Póngase en contacto';
 
   @override
-  String get servicesTitle => 'O que podemos fazer por você';
+  String get servicesTitle => 'Nuestros Servicios';
 
   @override
-  String get serviceMaintenance => 'Mantenimiento de Empresas';
+  String get serviceMaintenance => 'Mantenimiento de Piscinas';
 
   @override
   String get serviceMaintenanceDesc =>
-      'Servicio completo de mantenimiento de empresas: limpieza, química, inspección y cuidado preventivo.';
+      'Servicio completo de mantenimiento de piscinas: limpieza, química, inspección y cuidado preventivo.';
 
   @override
-  String get serviceRepairs => 'Reparaciones de Empresas';
+  String get serviceRepairs => 'Reparaciones de Piscinas';
 
   @override
   String get serviceRepairsDesc =>
@@ -80,32 +96,35 @@ class AppLocalizationsEs extends AppLocalizations {
       'Descubra opciones de rutas y oportunidades de franquicias diseñadas para inversores que buscan fuertes rendimientos y gran escalabilidad.';
 
   @override
-  String get whyChooseTitle => 'O que entregamos pra você';
+  String get whyChooseTitle => '¿Por Qué Elegir\na HABITAT?';
 
   @override
-  String get whyChooseSpecialized => 'Posicionamento de Mercado & Autoridade';
+  String get whyChooseSpecialized => 'Mantenimiento Especializado';
 
   @override
-  String get whyChooseSpecializedDesc => 'Criamos marcas que se destacam e comunicam valor imediato, transformando a percepção do seu negócio em autoridade sólida perante os seus clientes.';
+  String get whyChooseSpecializedDesc =>
+      'Gestionamos meticulosamente cada aspecto de su piscina o spa, garantizando una atención al detalle sin igual.';
 
   @override
-  String get whyChooseInnovation => 'Engenharia de Software de Alto Nível';
+  String get whyChooseInnovation => 'Innovación y Exclusividad';
 
   @override
-  String get whyChooseInnovationDesc => 'Desenvolvemos sistemas, aplicativos e plataformas web robustas, construídas com tecnologia moderna e regras de negócio feitas sob medida para sua operação.';
+  String get whyChooseInnovationDesc =>
+      'Como pioneros de este modelo de negocio en el área de Orlando, ofrecemos una solución distintiva adaptada tanto para propietarios de piscinas como para profesionales aspirantes.';
 
   @override
-  String get whyChooseLicensing => 'Operação Eficiente & Processos Automatizados';
+  String get whyChooseLicensing => 'Licencias Profesionales';
 
   @override
-  String get whyChooseLicensingDesc => 'Eliminamos retrabalhos manuais através de fluxos inteligentes e automações que reduzem custos e preparam sua empresa para escalar com segurança.';
+  String get whyChooseLicensingDesc =>
+      'Nuestros programas integrales de certificación y capacitación le permiten construir una carrera exitosa en una industria prometedora.';
 
   @override
   String get whyCommitmentTitle => 'Nuestro Compromiso\ncon la Excelencia';
 
   @override
   String get whyCommitmentDesc =>
-      'En HABITAT, nos dedicamos a brindar excelencia, confianza e innovación inigualables en todos los aspectos de nuestros servicios. Ya sea manteniendo su empresa o ayudándole a embarcarse en una nueva carrera, nuestra misión es proporcionar soluciones excepcionales que satisfagan sus necesidades.';
+      'En HABITAT, nos dedicamos a brindar excelencia, confianza e innovación inigualables en todos los aspectos de nuestros servicios. Ya sea manteniendo su piscina o ayudándole a embarcarse en una nueva carrera, nuestra misión es proporcionar soluciones excepcionales que satisfagan sus necesidades.';
 
   @override
   String get professionalsTitle => 'Conozca a Nuestros Profesionales';
@@ -144,7 +163,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get testimonial3Name => 'Carlos Souza';
 
   @override
-  String get contactTitle => 'Pronto para desenhar o projeto ideal para você?';
+  String get contactTitle => 'Póngase en contacto';
 
   @override
   String get contactOrCall => 'O llámenos';
@@ -254,14 +273,14 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get maintenanceHeroDesc =>
-      'Mantenimiento completo y recurrente para mantener su empresa impecable: química, limpieza, filtros e informe de calidad.';
+      'Mantenimiento completo y recurrente para mantener su piscina impecable: química, limpieza, filtros e informe de calidad.';
 
   @override
   String get maintenanceWhatIncluded => 'Qué está incluido';
 
   @override
   String get maintenanceWhatIncludedDesc =>
-      'Cada visita cubre todos los puntos esenciales para una empresa saludable.';
+      'Cada visita cubre todos los puntos esenciales para una piscina saludable.';
 
   @override
   String get maintenanceFeatureChemBalance => 'Equilibrio Químico';
@@ -310,14 +329,14 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get maintenanceWhyDesc1 =>
-      'No somos solo un servicio de limpieza. Somos socios en la salud de su empresa, con tecnología, consistencia y profesionales certificados.';
+      'No somos solo un servicio de limpieza. Somos socios en la salud de su piscina, con tecnología, consistencia y profesionales certificados.';
 
   @override
   String get maintenanceWhyDesc2 =>
-      'Cada visita está documentada digitalmente. Recibe un informe con fotos, parámetros e historial completo: total transistemarencia.';
+      'Cada visita está documentada digitalmente. Recibe un informe con fotos, parámetros e historial completo: total transparencia.';
 
   @override
-  String get maintenanceStatPools => 'Empresas atendidas';
+  String get maintenanceStatPools => 'Piscinas atendidas';
 
   @override
   String get maintenanceStatSatisfaction => 'Tasa de satisfacción';
@@ -374,7 +393,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get repairsFeatureTileDesc =>
-      'Reparaciones de revestimientos, azulejos sueltos, grietas y acabados para restaurar la estética de la empresa.';
+      'Reparaciones de revestimientos, azulejos sueltos, grietas y acabados para restaurar la estética de la piscina.';
 
   @override
   String get repairsFeatureElectrical => 'Eléctrica e Iluminación';
@@ -425,7 +444,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get investmentsHeroDesc =>
-      'Descubra modelos de inversión de alta rentabilidad y escalabilidad en el mercado de servicios premium para empresas.';
+      'Descubra modelos de inversión de alta rentabilidad y escalabilidad en el mercado de servicios premium para piscinas.';
 
   @override
   String get investmentsModelsTitle => 'Modelos de Inversión';
@@ -472,5 +491,5 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get investmentsWhyInelasticDemandDesc =>
-      'Una empresa es un activo que requiere cuidado constante, independientemente de los ciclos económicos.';
+      'Una piscina es un activo que requiere cuidado constante, independientemente de los ciclos económicos.';
 }

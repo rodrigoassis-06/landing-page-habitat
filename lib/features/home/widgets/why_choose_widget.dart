@@ -68,8 +68,12 @@ class WhyChooseWidget extends StatelessWidget {
         ),
         Text(
           l10n.whyChooseTitle,
-          style: (tt.displayLarge ?? tt.headlineMedium ?? const TextStyle(fontSize: 36, fontWeight: FontWeight.w800))
-              .copyWith(color: cs.onSurface, height: 1.1),
+          style: (tt.headlineMedium ??
+                  const TextStyle(
+                    fontSize: 34,
+                    fontWeight: FontWeight.bold,
+                  ))
+              .copyWith(color: cs.onSurface),
         ),
       ],
     );

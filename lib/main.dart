@@ -20,7 +20,7 @@ final _router = GoRouter(
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  VisibilityDetectorController.instance.updateInterval = const Duration(milliseconds: 150);
+  VisibilityDetectorController.instance.updateInterval = const Duration(milliseconds: 250);
 
   try {
     await Firebase.initializeApp(

@@ -155,6 +155,36 @@ abstract class AppLocalizations {
   /// **'A NEW CONCEPT\nFOR POOL CARE'**
   String get heroTitle;
 
+  /// No description provided for @heroEyebrow.
+  ///
+  /// In en, this message translates to:
+  /// **'360° AGENCY · IDENTITY · WEBSITES · SYSTEMS'**
+  String get heroEyebrow;
+
+  /// No description provided for @heroTitleLine1.
+  ///
+  /// In en, this message translates to:
+  /// **'A NEW CONCEPT'**
+  String get heroTitleLine1;
+
+  /// No description provided for @heroTitleLine3.
+  ///
+  /// In en, this message translates to:
+  /// **'IN 360°'**
+  String get heroTitleLine3;
+
+  /// No description provided for @heroCtaPrimary.
+  ///
+  /// In en, this message translates to:
+  /// **'START PROJECT'**
+  String get heroCtaPrimary;
+
+  /// No description provided for @heroCtaSecondary.
+  ///
+  /// In en, this message translates to:
+  /// **'VIEW PORTFOLIO'**
+  String get heroCtaSecondary;
+
   /// No description provided for @heroSubtitle.
   ///
   /// In en, this message translates to:

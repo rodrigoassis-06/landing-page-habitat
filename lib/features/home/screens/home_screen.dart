@@ -1,7 +1,6 @@
 // home_screen.dart
 import 'package:flutter/material.dart';
 import 'package:uniqswims_lp/l10n/app_localizations.dart';
-import 'package:uniqswims_lp/shared/footer.dart';
 import 'package:uniqswims_lp/features/home/widgets/services_section.dart';
 import 'package:uniqswims_lp/features/home/widgets/hero_section.dart';
 import 'package:uniqswims_lp/features/home/widgets/about_section.dart';
@@ -9,8 +8,8 @@ import 'package:uniqswims_lp/features/home/widgets/why_choose_widget.dart';
 import 'package:uniqswims_lp/features/home/widgets/closing_cta_section.dart';
 import 'package:uniqswims_lp/features/home/widgets/contact_section.dart';
 import 'package:uniqswims_lp/shared/app_bar_hide.dart';
-import 'package:uniqswims_lp/shared/locale/language_selector.dart';
 import 'package:uniqswims_lp/features/home/widgets/testimonials_section.dart';
+import 'package:uniqswims_lp/shared/footer.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -124,13 +123,23 @@ class _HomeScreenState extends State<HomeScreen> {
             controller: _scrollController,
             child: Column(
               children: [
-                HeroSection(sectionKey: _heroKey, onContactPressed: () => _scrollToKey(_contactKey)),
+                HeroSection(
+                  sectionKey: _heroKey,
+                  onContactPressed: () => _scrollToKey(_contactKey),
+                  onPortfolioPressed: () => _scrollToKey(_servicesKey),
+                ),
                 AboutSection(backgroundImage: 'assets/images/about.jpeg', sectionKey: _aboutKey, onContactPressed: () => _scrollToKey(_contactKey)),
                 ServicesSection(sectionKey: _servicesKey, onContactPressed: () => _scrollToKey(_contactKey)),
                 WhyChooseWidget(sectionKey: _whyChooseKey),
                 ClosingCtaSection(onContactPressed: () => _scrollToKey(_contactKey)),
                 TestimonialsSection(sectionKey: _testimonialsKey),
                 ContactSection(sectionKey: _contactKey,),
+                Footer(
+                  onManifestoPressed: () => _scrollToKey(_aboutKey),
+                  onServicesPressed: () => _scrollToKey(_servicesKey),
+                  onContactPressed: () => _scrollToKey(_contactKey),
+                  onScheduleBudgetPressed: () => _scrollToKey(_contactKey),
+                ),
               ],
             ),
           );

@@ -7,7 +7,7 @@ class ServicesSection extends StatelessWidget {
   final Key? sectionKey;
   final VoidCallback? onContactPressed;
 
-  const ServicesSection({Key? key, this.sectionKey, this.onContactPressed}) : super(key: key);
+  const ServicesSection({super.key, this.sectionKey, this.onContactPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +41,7 @@ class ServicesSection extends StatelessWidget {
       _ServiceItem(
         title: 'Suporte & Evolução',
         description: 'Garantimos acompanhamento técnico contínuo, monitoramento, melhorias constantes e sustentação para que seu ecossistema nunca pare.',
-        imagePath: 'assets/images/image-6-hd.png',
+        imagePath: 'assets/images/servico_suporte.jpg',
         alignment: Alignment.center,
         route: '/contact',
       ),
@@ -57,7 +57,7 @@ class ServicesSection extends StatelessWidget {
         return Container(
           key: sectionKey,
           width: double.infinity,
-          color: cs.background,
+          color: cs.surface,
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 36 : 72,
             horizontal: isMobile ? 20 : 48,
@@ -103,7 +103,7 @@ class ServicesSection extends StatelessWidget {
                     viewportFraction: viewportFraction,
                     enableInfiniteScroll: false,
                     enlargeCenterPage: false,
-                    height: itemsToShow == 1 ? 340 : 380,
+                    height: itemsToShow == 1 ? 400 : 420,
                     padEnds: false,
                   ),
                 ),
@@ -154,10 +154,10 @@ class _ServiceCard extends StatelessWidget {
           decoration: BoxDecoration(
             color: colorScheme.surface,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: colorScheme.onSurface.withOpacity(0.04)),
+            border: Border.all(color: colorScheme.onSurface.withValues(alpha: 0.08)),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.35),
+                color: Colors.black.withValues(alpha: 0.35),
                 blurRadius: 14,
                 offset: const Offset(0, 6),
               ),
@@ -178,6 +178,8 @@ class _ServiceCard extends StatelessWidget {
               const SizedBox(height: 14),
               Text(
                 title,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
                 style:
                     (textTheme.titleLarge ??
                             const TextStyle(
@@ -189,9 +191,11 @@ class _ServiceCard extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 description,
+                maxLines: 4,
+                overflow: TextOverflow.ellipsis,
                 style: (textTheme.bodyMedium ?? const TextStyle(fontSize: 14))
                     .copyWith(
-                      color: colorScheme.onSurface.withOpacity(0.85),
+                      color: colorScheme.onSurface.withValues(alpha: 0.85),
                       height: 1.5,
                     ),
               ),
@@ -203,13 +207,13 @@ class _ServiceCard extends StatelessWidget {
   }
 
   Widget _buildImage(String cardImgPath, Alignment imgAlignment) {
-    return ColorFiltered(
-      colorFilter: const ColorFilter.mode(Colors.grey, BlendMode.saturation),
+    return RepaintBoundary(
       child: Image.asset(
         cardImgPath,
         fit: BoxFit.cover,
-        cacheWidth: 800,
         alignment: imgAlignment,
+        gaplessPlayback: true,
+        filterQuality: FilterQuality.medium,
         errorBuilder: (context, error, stackTrace) {
           return Container(
             color: colorScheme.surface,

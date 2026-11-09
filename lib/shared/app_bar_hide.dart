@@ -58,12 +58,14 @@ class _HideableAppBarState extends State<HideableAppBar>
 
     final direction = sc.position.userScrollDirection;
 
-    // se scroll para baixo (conteúdo sobe), esconder
     if (direction == ScrollDirection.reverse) {
-      _controller.animateTo(0.0, curve: Curves.easeInOut);
+      if (_controller.value > 0.0 && !_controller.isAnimating) {
+        _controller.animateTo(0.0, curve: Curves.easeInOut);
+      }
     } else if (direction == ScrollDirection.forward) {
-      // se scroll para cima (conteúdo desce), mostrar
-      _controller.animateTo(1.0, curve: Curves.easeInOut);
+      if (_controller.value < 1.0 && !_controller.isAnimating) {
+        _controller.animateTo(1.0, curve: Curves.easeInOut);
+      }
     }
   }
 
