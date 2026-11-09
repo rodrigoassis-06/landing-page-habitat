@@ -32,7 +32,15 @@ class Footer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      color: const Color(0xFF141724), // Fundo grafite/navy do anexo
+      decoration: BoxDecoration(
+        color: Colors.black, // Fundo 100% preto
+        border: Border(
+          top: BorderSide(
+            color: Colors.white.withOpacity(0.08),
+            width: 1,
+          ),
+        ),
+      ),
       padding: const EdgeInsets.symmetric(vertical: 54, horizontal: 32),
       child: Center(
         child: ConstrainedBox(
@@ -105,51 +113,15 @@ class Footer extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
-        // Habitat Logo
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              width: 36,
-              height: 36,
-              decoration: BoxDecoration(
-                color: const Color(0xFF1E2338),
-                borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: const Color(0xFF4DB8FF).withOpacity(0.35)),
-              ),
-              child: const Center(
-                child: Icon(
-                  Icons.change_circle_outlined,
-                  color: Color(0xFF4DB8FF),
-                  size: 22,
-                ),
-              ),
-            ),
-            const SizedBox(width: 12),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                  'Habitat',
-                  style: GoogleFonts.syne(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.white,
-                    letterSpacing: -0.3,
-                  ),
-                ),
-                Transform.translate(
-                  offset: const Offset(2, -6),
-                  child: const Icon(
-                    Icons.auto_awesome,
-                    size: 11,
-                    color: Color(0xFF4DB8FF),
-                  ),
-                ),
-              ],
-            ),
-          ],
+        // Habitat Logo (apenas o texto limpo, sem ícones nos lados)
+        Text(
+          'Habitat',
+          style: GoogleFonts.syne(
+            fontSize: 26,
+            fontWeight: FontWeight.w800,
+            color: Colors.white,
+            letterSpacing: -0.3,
+          ),
         ),
         const SizedBox(height: 18),
         Text(
@@ -377,10 +349,10 @@ class _SocialIconButtonState extends State<_SocialIconButton> {
             width: 34,
             height: 34,
             decoration: BoxDecoration(
-              color: _isHovered ? const Color(0xFF333B58) : const Color(0xFF222638),
+              color: _isHovered ? const Color(0xFF262626) : const Color(0xFF141414),
               borderRadius: BorderRadius.circular(8),
               border: Border.all(
-                color: _isHovered ? const Color(0xFF4DB8FF).withOpacity(0.5) : Colors.white.withOpacity(0.08),
+                color: _isHovered ? const Color(0xFF4DB8FF).withOpacity(0.6) : Colors.white.withOpacity(0.12),
                 width: 1,
               ),
             ),
@@ -428,10 +400,10 @@ class _PillButtonState extends State<_PillButton> {
           duration: const Duration(milliseconds: 180),
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
           decoration: BoxDecoration(
-            color: _isHovered ? const Color(0xFF2E3550) : const Color(0xFF24283D),
+            color: _isHovered ? const Color(0xFF222222) : const Color(0xFF141414),
             borderRadius: BorderRadius.circular(50),
             border: Border.all(
-              color: _isHovered ? const Color(0xFF4DB8FF).withOpacity(0.5) : Colors.white.withOpacity(0.18),
+              color: _isHovered ? const Color(0xFF4DB8FF).withOpacity(0.6) : Colors.white.withOpacity(0.18),
               width: 1,
             ),
             boxShadow: _isHovered
