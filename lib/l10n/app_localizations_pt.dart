@@ -52,7 +52,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get heroSubtitle =>
-      'Nós vamos além da entrega tradicional. Oferecemos compromisso, com cuidado e precisão.';
+      'Nós vamos além da entrega tradicional. Oferecemos compromisso, cuidado e precisão.';
 
   @override
   String get heroCta => 'Entre em contato';
@@ -531,7 +531,7 @@ class AppLocalizationsPtBr extends AppLocalizationsPt {
 
   @override
   String get heroSubtitle =>
-      'Nós vamos além da entrega tradicional. Oferecemos compromisso, com cuidado e precisão.';
+      'Nós vamos além da entrega tradicional. Oferecemos compromisso, cuidado e precisão.';
 
   @override
   String get heroCta => 'Entre em contato';
